@@ -4,13 +4,15 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import enstabretagne.engine.*;
+import engine.GenericSimEntity;
 import engine.GenericSimEvent;
 import enstabretagne.base.math.MoreRandom;
 import enstabretagne.base.time.LogicalDateTime;
 
-public class Airplane extends enstabretagne.engine.EntiteSimulee {
+public class Airplane extends GenericSimEntity {
 
 	private int id ;
+	
 	
 	public Airplane(SimuEngine engine, InitAirplane ini) {
 		super(engine, ini);
@@ -19,7 +21,7 @@ public class Airplane extends enstabretagne.engine.EntiteSimulee {
 	@Override
 	protected void init() {
 		super.init();
-		Post(new GenericSimEvent(getEngine().SimulationDate(), this::landing));
+		postBehaviour(getEngine().SimulationDate(), this::landing);
 	}
 	
 	public void landing() {
