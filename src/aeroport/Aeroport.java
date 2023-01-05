@@ -5,6 +5,8 @@ import enstabretagne.engine.InitData;
 import enstabretagne.engine.SimuEngine;
 
 public class Aeroport extends EntiteSimulee{
+	
+	public int numLib = 6 ;
 
 	public Aeroport(SimuEngine engine, InitData ini) {
 		super(engine, ini);

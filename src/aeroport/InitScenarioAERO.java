@@ -1,22 +1,34 @@
-package aeroport;
-
-import enstabretagne.base.time.LogicalDateTime;
-import enstabretagne.engine.ScenarioInitData;
-
-public class InitScenarioAERO extends ScenarioInitData{
-	
-	double freq;
-
-	public InitScenarioAERO(String name, int graine, LogicalDateTime debut, LogicalDateTime fin, double freq) {
-		super(name, graine, debut, fin);
-		this.freq = freq;
-	}
-	
-	public double getFreq() {
-		return freq;
-	}
-	
-	public void setName(String newname) {
-		this.name = newname;
-	}
-}
+//package aeroport;
+//
+//import enstabretagne.base.time.LogicalDateTime;
+//import enstabretagne.engine.ScenarioInitData;
+//
+//public class InitScenario extends ScenarioInitData{
+//	
+//	private final double freq;
+//	private final InitAirplane initAirplane ;
+//	private final InitAirport initAirport ;
+//
+//	public InitScenario(String name, int graine, LogicalDateTime debut, LogicalDateTime fin,
+//			double freq,InitAirplane initAirplane, InitAirport initAirport) {
+//		super(name, graine, debut, fin);
+//		this.freq = freq;
+//		this.initAirplane = initAirplane ;
+//		this.initAirport = initAirport ;
+//	}
+//	
+//	public double getFreq() {
+//		return freq;
+//	}
+//
+//	public InitAirplane getInitAirplane() {
+//		return initAirplane;
+//	}
+//
+//	public InitAirport getInitAirport() {
+//		return initAirport;
+//	}
+//	
+//	
+//
+//}

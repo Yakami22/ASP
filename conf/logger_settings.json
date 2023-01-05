@@ -21,7 +21,6 @@
 		    ],
 		    "levelsToRecord":[ 
 		    	"Information",
-		    	"Detail",
 		    	"Warning",
 				"Error",
 				"Fatal",
