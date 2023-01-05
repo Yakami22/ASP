@@ -25,7 +25,7 @@ public class MyScenario extends Scenario{
 	public void creerEntitesSimulees() {
 		//creer aeroprot
 		Aeroport aeroport = new Aeroport(this.getEngine(), this.getInit());
-		for(int i=0;i<10;i++) {
+		for(int i=0;i<5;i++) {
 			createRandomAirplane(this);
 			totalEntities++;
 

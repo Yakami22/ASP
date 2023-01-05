@@ -3,6 +3,8 @@ package aeroport;
 import java.util.List;
 
 import enstabretagne.base.logger.Logger;
+import enstabretagne.base.time.LogicalDateTime;
+import enstabretagne.base.time.LogicalDuration;
 import enstabretagne.engine.*;
 import engine.GenericSimEntity;
 
@@ -23,11 +25,21 @@ public class Airplane extends GenericSimEntity {
 	}
 	
 	public void landing() {
-		Logger.Information(this, getName(), "landing");
+		//Logger.Information(this, getName(), "landing");
 		List<EntiteSimulee> myAeroports = recherche(e -> ((e instanceof Aeroport)));
-		if(myAeroports.size()>0)
-			Logger.Information(this, "landing", getName() + " a trouvé l'aeroport " + myAeroports.get(0).getName());
-		//Aeroport a = (Aeroport) myAeroports.get(0) ;
+		if(myAeroports.size()>0) {
+			Aeroport a = (Aeroport) myAeroports.get(0) ;
+			if (a.pisteLibre && a.porteLibre > 0) {
+				a.pisteLibre = false;
+				a.porteLibre -= 1;
+				Logger.Information(this, "landing", getName() + " a trouvé l'aeroport " + myAeroports.get(0).getName());
+				getEngine().SimulationDate().add(LogicalDuration.ofMinutes(2));
+				a.pisteLibre = true;	
+			} else {
+				a.waitingPlanes.add(this);
+				System.out.println("Test landing " + a.waitingPlanes.toString());
+			}
+		}
 	}
 	
 //	public void takeOff() {
@@ -40,12 +52,22 @@ public class Airplane extends GenericSimEntity {
 //	}
 	
 	public void takeOff() {
-		Logger.Information(this, getName(), "takeOff");
+		//Logger.Information(this, getName(), "takeOff");
 		List<EntiteSimulee> myAeroports = recherche(e -> ((e instanceof Aeroport)));
-		if(myAeroports.size()>0)
-			Logger.Information(this, "takeOff", getName() + " a décollé de l'aeroport " + myAeroports.get(0).getName());
-		//Aeroport a = (Aeroport) myAeroports.get(0) ;
-	}
+		if(myAeroports.size()>0) {
+			Aeroport a = (Aeroport) myAeroports.get(0) ;
+			if (a.pisteLibre) {
+				a.pisteLibre = false;
+				a.porteLibre += 1;
+				Logger.Information(this, "takeOff", getName() + " a décollé de l'aeroport " + myAeroports.get(0).getName());	
+				getEngine().SimulationDate().add(LogicalDuration.ofMinutes(3));
+				a.pisteLibre = true;	
+			} else {
+				a.waitingPlanes.add(this);
+				System.out.println("Test takeoff " + a.waitingPlanes.toString());
+			}
+		}
+	}	
 	
 
 }
