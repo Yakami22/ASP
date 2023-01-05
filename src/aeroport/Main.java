@@ -16,9 +16,9 @@ public class Main {
         LogicalDateTime end = new LogicalDateTime("04/12/2019 15:00");
 				
 		SimuEngine engine = new SimuEngine();
-		MyScenario scenario = new MyScenario(engine, new InitScenario("scenario", 2, start, end, 1.d/20.d));
+		MyScenario scenario = new MyScenario(engine, new InitScenarioAERO("scenario", 2, start, end, 1.d/20.d));
 
-		engine.setCurrentScenario(null); // Scenario a instancier
+		engine.setCurrentScenario(scenario); // Scenario a instancier
 		engine.initSimulation();
 		engine.simulate();
 		

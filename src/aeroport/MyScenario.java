@@ -2,6 +2,7 @@ package aeroport;
 
 import java.util.List;
 
+import engine.GenericSimEvent;
 import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.base.time.LogicalDuration;
 import enstabretagne.engine.EntiteSimulee;
@@ -12,59 +13,37 @@ import enstabretagne.engine.SimuEngine;
 
 public class MyScenario extends Scenario{
 
-	double freq; 
-	int totalEntities;
-
 	
-	public MyScenario(SimuEngine engine, InitScenario init) {
+	public MyScenario(SimuEngine engine, ScenarioInitData init) {
 		super(engine, init);
-		this.freq = init.getFreq();
-		// Logger ?
+		// TODO Auto-generated constructor stub
+		iniAirport = (InitScenarioAERO) init;
+	}
+
+	InitScenarioAERO iniAirport;
+	
+
+
+	//-------------------
+	
+	
+
+	public void Post(LogicalDateTime d,Runnable r) {
+		Post(new GenericSimEvent(d, r));
+	}
+	
+	public void Post(LogicalDuration d,Runnable r) {
+		Post(new GenericSimEvent(getEngine().SimulationDate().add(d), r));
 	}
 
 	@Override
 	public void creerEntitesSimulees() {
-		// Logger
-		//creer aeroprot
-		Aeroport aeroport = new Aeroport(engine, ini);
-		for(int i=0;i<10;i++) {
-			createRandomAirplane(this);
-			totalEntities++;
-
-		}
-	}
-	
-	protected static Airplane createRandomAirplane(Scenario s) {
-		return new Airplane(s.getEngine(), new InitAirplane("Plane", "F"));
-	}
-	
-	public void init() {
-		super.init();
-		List<EntiteSimulee> l = recherche(e->{return e instanceof Airplane ;});
-		for(EntiteSimulee e: l) {
-			e.requestInit();
-		}
-		Post(new CreateAirplane(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(8)), "avion"));
-	}
-	
-	public class CreateAirplane extends SimEvent {
-		
-		String nom;
-
-		public CreateAirplane(LogicalDateTime d,String nom) {
-			super(d);
-			this.nom = nom;
-		}
-
-		//Exemple typique: 
-		// en tant qu'entit�, le sc�nario cr�e des entit�s filles
-		//c'est au sc�nario de faire le requestInit()
-		@Override
-		public void process() {
-			Airplane es = createRandomAirplane(MyScenario.this);
-			es.requestInit();
-		}
+		// TODO Auto-generated method stub
+		new Aeroport(getEngine(), iniAirport);
 		
 	}
+	
+	
+	
 
 }
