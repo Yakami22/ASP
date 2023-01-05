@@ -19,14 +19,12 @@ public class MyScenario extends Scenario{
 	public MyScenario(SimuEngine engine, InitScenario init) {
 		super(engine, init);
 		this.freq = init.getFreq();
-		// Logger ?
 	}
 
 	@Override
 	public void creerEntitesSimulees() {
-		// Logger
 		//creer aeroprot
-		Aeroport aeroport = new Aeroport(engine, ini);
+		Aeroport aeroport = new Aeroport(this.getEngine(), this.getInit());
 		for(int i=0;i<10;i++) {
 			createRandomAirplane(this);
 			totalEntities++;

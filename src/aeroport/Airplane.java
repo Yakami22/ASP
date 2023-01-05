@@ -1,13 +1,10 @@
 package aeroport;
 
 import java.util.List;
-import java.util.function.Predicate;
 
+import enstabretagne.base.logger.Logger;
 import enstabretagne.engine.*;
 import engine.GenericSimEntity;
-import engine.GenericSimEvent;
-import enstabretagne.base.math.MoreRandom;
-import enstabretagne.base.time.LogicalDateTime;
 
 public class Airplane extends GenericSimEntity {
 
@@ -25,8 +22,11 @@ public class Airplane extends GenericSimEntity {
 	}
 	
 	public void landing() {
+		Logger.Information(this, getName(), "init");
 		List<EntiteSimulee> myAeroports = recherche(e -> ((e instanceof Aeroport)));
-		Aeroport a = (Aeroport) myAeroports.get(0) ;
+		if(myAeroports.size()>0)
+			Logger.Information(this, "init", getName() + " a trouvé l'aeroport " + myAeroports.get(0).getName());
+		//Aeroport a = (Aeroport) myAeroports.get(0) ;
 	}
 	
 	public void takeOff() {
