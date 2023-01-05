@@ -2,6 +2,7 @@ package aeroport;
 
 import java.util.List;
 
+import engine.GenericSimEvent;
 import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.base.time.LogicalDuration;
 import enstabretagne.engine.EntiteSimulee;
@@ -25,15 +26,21 @@ public class MyScenario extends Scenario{
 	public void creerEntitesSimulees() {
 		//creer aeroprot
 		Aeroport aeroport = new Aeroport(this.getEngine(), this.getInit());
-		for(int i=0;i<10;i++) {
-			createRandomAirplane(this);
+		for(int i=0;i<8;i++) {
+			createRandomAirplane(this , i);
 			totalEntities++;
 
 		}
 	}
+//	public int i ; 
+	//InitScenario
+//	public int numLib = 6 ; 
 	
-	protected static Airplane createRandomAirplane(Scenario s) {
-		return new Airplane(s.getEngine(), new InitAirplane("Plane", "F"));
+	protected static Airplane createRandomAirplane(Scenario s, int i ) {
+//		return new Airplane(s.getEngine(), new InitAirplane("Plane", "F"));
+		//
+		return new Airplane(s.getEngine(), new InitAirplane("F" + i++, "booeing"));
+
 	}
 	
 	public void init() {
@@ -42,7 +49,7 @@ public class MyScenario extends Scenario{
 		for(EntiteSimulee e: l) {
 			e.requestInit();
 		}
-		Post(new CreateAirplane(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(8)), "avion"));
+//		Post(new CreateAirplane(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(8)), "avion"));
 	}
 	
 	public class CreateAirplane extends SimEvent {
@@ -59,10 +66,28 @@ public class MyScenario extends Scenario{
 		//c'est au sc�nario de faire le requestInit()
 		@Override
 		public void process() {
-			Airplane es = createRandomAirplane(MyScenario.this);
+			Airplane es = createRandomAirplane(MyScenario.this , 0);
 			es.requestInit();
 		}
 		
 	}
+	
+	
+	
+	//----
+	
+
+
+//	public void Post(LogicalDateTime d,Runnable r) {
+//		Post(new GenericSimEvent(d, r));
+//	}
+//	
+//	public void Post(LogicalDuration d,Runnable r) {
+//		Post(new GenericSimEvent(getEngine().SimulationDate().add(d), r));
+//	}
+//	
+//	
+	
+	//---
 
 }
