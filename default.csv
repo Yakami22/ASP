@@ -1,0 +1,102 @@
+Scenario;Replique;Temps Reel;Temps Logique;Niveau de Log;Nom Objet;Fonction;Message
+DefaultScenario;0;2023-01-08T21:35:37.164522800Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;Airport;Goetghebeur International Airport is now opened !
+DefaultScenario;0;2023-01-08T21:35:37.216530700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
+DefaultScenario;0;2023-01-08T21:35:37.217527700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 1
+DefaultScenario;0;2023-01-08T21:35:37.219527600Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findEntryLane;Entry lane 1 is available for plane 1
+DefaultScenario;0;2023-01-08T21:35:37.219527600Z;01/01/2015 00:00:00;Information;airport.EntryLane@69997e9d;acceptPlane;Plane 1 is assigned entry lane 1
+DefaultScenario;0;2023-01-08T21:35:37.220527600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 1 was given authorization to land
+DefaultScenario;0;2023-01-08T21:35:37.240528Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
+DefaultScenario;0;2023-01-08T21:35:37.241529500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 2
+DefaultScenario;0;2023-01-08T21:35:37.242529600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;denyLanding;Plane 2 was denied landing
+DefaultScenario;0;2023-01-08T21:35:37.255529300Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findTerminal;Terminal 1 is available for plane 1
+DefaultScenario;0;2023-01-08T21:35:37.256531400Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Terminal 1 accepted plane 1
+DefaultScenario;0;2023-01-08T21:35:37.257531700Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Landing & entry lane 1 are now available
+DefaultScenario;0;2023-01-08T21:35:37.272531100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to exit track
+DefaultScenario;0;2023-01-08T21:35:37.273530500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 3
+DefaultScenario;0;2023-01-08T21:35:37.275532900Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findExitLane;Exit lane 1 is available for plane 3
+DefaultScenario;0;2023-01-08T21:35:37.276532Z;01/01/2015 00:00:00;Information;airport.ExitLane@15aab8c6;acceptPlane;Plane 3 is assigned exit lane 1
+DefaultScenario;0;2023-01-08T21:35:37.289533200Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 3 was given authorization to take off
+DefaultScenario;0;2023-01-08T21:35:37.291534600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 3 just took off
+DefaultScenario;0;2023-01-08T21:35:37.304535700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
+DefaultScenario;0;2023-01-08T21:35:37.304535700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 4
+DefaultScenario;0;2023-01-08T21:35:37.305534Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findEntryLane;Entry lane 1 is available for plane 4
+DefaultScenario;0;2023-01-08T21:35:37.306535400Z;01/01/2015 00:00:00;Information;airport.EntryLane@69997e9d;acceptPlane;Plane 4 is assigned entry lane 1
+DefaultScenario;0;2023-01-08T21:35:37.306535400Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 4 was given authorization to land
+DefaultScenario;0;2023-01-08T21:35:37.316534500Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findTerminal;Terminal 1 is available for plane 4
+DefaultScenario;0;2023-01-08T21:35:37.316534500Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Terminal 1 accepted plane 4
+DefaultScenario;0;2023-01-08T21:35:37.316534500Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Landing & entry lane 1 are now available
+DefaultScenario;0;2023-01-08T21:35:37.327536100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to exit track
+DefaultScenario;0;2023-01-08T21:35:37.327536100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 5
+DefaultScenario;0;2023-01-08T21:35:37.328535900Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findExitLane;Exit lane 1 is available for plane 5
+DefaultScenario;0;2023-01-08T21:35:37.328535900Z;01/01/2015 00:00:00;Information;airport.ExitLane@15aab8c6;acceptPlane;Plane 5 is assigned exit lane 1
+DefaultScenario;0;2023-01-08T21:35:37.336537300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 5 was given authorization to take off
+DefaultScenario;0;2023-01-08T21:35:37.337536400Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 5 just took off
+DefaultScenario;0;2023-01-08T21:35:37.346539100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
+DefaultScenario;0;2023-01-08T21:35:37.346539100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 6
+DefaultScenario;0;2023-01-08T21:35:37.347538900Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findEntryLane;Entry lane 1 is available for plane 6
+DefaultScenario;0;2023-01-08T21:35:37.347538900Z;01/01/2015 00:00:00;Information;airport.EntryLane@69997e9d;acceptPlane;Plane 6 is assigned entry lane 1
+DefaultScenario;0;2023-01-08T21:35:37.348537400Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 6 was given authorization to land
+DefaultScenario;0;2023-01-08T21:35:37.357537800Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findTerminal;Terminal 1 is available for plane 6
+DefaultScenario;0;2023-01-08T21:35:37.357537800Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Terminal 1 accepted plane 6
+DefaultScenario;0;2023-01-08T21:35:37.357537800Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Landing & entry lane 1 are now available
+DefaultScenario;0;2023-01-08T21:35:37.366540500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to exit track
+DefaultScenario;0;2023-01-08T21:35:37.367538700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 7
+DefaultScenario;0;2023-01-08T21:35:37.367538700Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findExitLane;Exit lane 1 is available for plane 7
+DefaultScenario;0;2023-01-08T21:35:37.368540600Z;01/01/2015 00:00:00;Information;airport.ExitLane@15aab8c6;acceptPlane;Plane 7 is assigned exit lane 1
+DefaultScenario;0;2023-01-08T21:35:37.378539500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 7 was given authorization to take off
+DefaultScenario;0;2023-01-08T21:35:37.378539500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 7 just took off
+DefaultScenario;0;2023-01-08T21:35:37.389540800Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
+DefaultScenario;0;2023-01-08T21:35:37.389540800Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 8
+DefaultScenario;0;2023-01-08T21:35:37.390540600Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findEntryLane;Entry lane 1 is available for plane 8
+DefaultScenario;0;2023-01-08T21:35:37.390540600Z;01/01/2015 00:00:00;Information;airport.EntryLane@69997e9d;acceptPlane;Plane 8 is assigned entry lane 1
+DefaultScenario;0;2023-01-08T21:35:37.390540600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 8 was given authorization to land
+DefaultScenario;0;2023-01-08T21:35:37.400545700Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findTerminal;Terminal 1 is available for plane 8
+DefaultScenario;0;2023-01-08T21:35:37.401544400Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Terminal 1 accepted plane 8
+DefaultScenario;0;2023-01-08T21:35:37.402541800Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Landing & entry lane 1 are now available
+DefaultScenario;0;2023-01-08T21:35:37.413542700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to exit track
+DefaultScenario;0;2023-01-08T21:35:37.414544800Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 9
+DefaultScenario;0;2023-01-08T21:35:37.414544800Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findExitLane;Exit lane 1 is available for plane 9
+DefaultScenario;0;2023-01-08T21:35:37.415545200Z;01/01/2015 00:00:00;Information;airport.ExitLane@15aab8c6;acceptPlane;Plane 9 is assigned exit lane 1
+DefaultScenario;0;2023-01-08T21:35:37.428544500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 9 was given authorization to take off
+DefaultScenario;0;2023-01-08T21:35:37.428544500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 9 just took off
+DefaultScenario;0;2023-01-08T21:35:37.439546500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
+DefaultScenario;0;2023-01-08T21:35:37.440548Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 10
+DefaultScenario;0;2023-01-08T21:35:37.440548Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findEntryLane;Entry lane 1 is available for plane 10
+DefaultScenario;0;2023-01-08T21:35:37.440548Z;01/01/2015 00:00:00;Information;airport.EntryLane@69997e9d;acceptPlane;Plane 10 is assigned entry lane 1
+DefaultScenario;0;2023-01-08T21:35:37.441546200Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 10 was given authorization to land
+DefaultScenario;0;2023-01-08T21:35:37.452547500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
+DefaultScenario;0;2023-01-08T21:35:37.452547500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 11
+DefaultScenario;0;2023-01-08T21:35:37.453548100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;denyLanding;Plane 11 was denied landing
+DefaultScenario;0;2023-01-08T21:35:37.466547400Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findTerminal;Terminal 1 is available for plane 10
+DefaultScenario;0;2023-01-08T21:35:37.466547400Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Terminal 1 accepted plane 10
+DefaultScenario;0;2023-01-08T21:35:37.466547400Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Landing & entry lane 1 are now available
+DefaultScenario;0;2023-01-08T21:35:37.478547Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to exit track
+DefaultScenario;0;2023-01-08T21:35:37.478547Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 12
+DefaultScenario;0;2023-01-08T21:35:37.479547700Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findExitLane;Exit lane 1 is available for plane 12
+DefaultScenario;0;2023-01-08T21:35:37.479547700Z;01/01/2015 00:00:00;Information;airport.ExitLane@15aab8c6;acceptPlane;Plane 12 is assigned exit lane 1
+DefaultScenario;0;2023-01-08T21:35:37.490549700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 12 was given authorization to take off
+DefaultScenario;0;2023-01-08T21:35:37.491550300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 12 just took off
+DefaultScenario;0;2023-01-08T21:35:37.502552Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findEntryLane;Entry lane 1 is available for plane 2
+DefaultScenario;0;2023-01-08T21:35:37.502552Z;01/01/2015 00:00:00;Information;airport.EntryLane@69997e9d;acceptPlane;Plane 2 is assigned entry lane 1
+DefaultScenario;0;2023-01-08T21:35:37.503550400Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 2 was given authorization to land
+DefaultScenario;0;2023-01-08T21:35:37.512549600Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findTerminal;Terminal 1 is available for plane 2
+DefaultScenario;0;2023-01-08T21:35:37.513552Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Terminal 1 accepted plane 2
+DefaultScenario;0;2023-01-08T21:35:37.513552Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Landing & entry lane 1 are now available
+DefaultScenario;0;2023-01-08T21:35:37.523551600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to exit track
+DefaultScenario;0;2023-01-08T21:35:37.524551800Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 13
+DefaultScenario;0;2023-01-08T21:35:37.524551800Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findExitLane;Exit lane 1 is available for plane 13
+DefaultScenario;0;2023-01-08T21:35:37.525551700Z;01/01/2015 00:00:00;Information;airport.ExitLane@15aab8c6;acceptPlane;Plane 13 is assigned exit lane 1
+DefaultScenario;0;2023-01-08T21:35:37.535554100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 13 was given authorization to take off
+DefaultScenario;0;2023-01-08T21:35:37.535554100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 13 just took off
+DefaultScenario;0;2023-01-08T21:35:37.546553700Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findEntryLane;Entry lane 1 is available for plane 11
+DefaultScenario;0;2023-01-08T21:35:37.546553700Z;01/01/2015 00:00:00;Information;airport.EntryLane@69997e9d;acceptPlane;Plane 11 is assigned entry lane 1
+DefaultScenario;0;2023-01-08T21:35:37.547554800Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 11 was given authorization to land
+DefaultScenario;0;2023-01-08T21:35:37.556555Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findTerminal;Terminal 1 is available for plane 11
+DefaultScenario;0;2023-01-08T21:35:37.557553200Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Terminal 1 accepted plane 11
+DefaultScenario;0;2023-01-08T21:35:37.557553200Z;01/01/2015 00:00:00;Information;airport.Terminal@2df9b86;acceptPlane;Landing & entry lane 1 are now available
+DefaultScenario;0;2023-01-08T21:35:37.566556Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to exit track
+DefaultScenario;0;2023-01-08T21:35:37.567555500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 14
+DefaultScenario;0;2023-01-08T21:35:37.567555500Z;01/01/2015 00:00:00;Information;airport.Airport@2892dae4;findExitLane;Exit lane 1 is available for plane 14
+DefaultScenario;0;2023-01-08T21:35:37.568556800Z;01/01/2015 00:00:00;Information;airport.ExitLane@15aab8c6;acceptPlane;Plane 14 is assigned exit lane 1
+DefaultScenario;0;2023-01-08T21:35:37.577558Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 14 was given authorization to take off
+DefaultScenario;0;2023-01-08T21:35:37.577558Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 14 just took off
