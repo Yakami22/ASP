@@ -19,8 +19,8 @@ public class Test {
 		        LogicalDateTime end = new LogicalDateTime("04/12/2019 15:00");
 						
 		        AirportPlan plan = new AirportPlan(1, 
-		        		new InitScenario("Brest Guipavas", 0,
-						start, end, 1/20d,
+		        		new InitScenario("Brest Guipavaaaas", 0,
+						start, end, 1/45d,
 						new InitAirplane("Avion","F"),
 						new InitAirport("AirportOne")));
 				
