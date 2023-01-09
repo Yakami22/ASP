@@ -34,7 +34,7 @@ public class Airplane extends SimEntity {
         Logger.Information(this, "approach", "Plane " + this.getId() + " has started its approach");
     }
     public void land() {
-        Logger.Information(this, "land", "Plane " + this.getId() + " just landed on runway " + this.getRunway());
+        Logger.Information(this, "land", "Plane " + this.getId() + " just landed on runway " + this.getRunway().getId());
     }
 
     public void flightOver() {
@@ -50,7 +50,7 @@ public class Airplane extends SimEntity {
     }
 
     public void preparation() {
-        Logger.Information(this, "preparation", "Plane " + this.getId() + "is preparing for next flight");
+        Logger.Information(this, "preparation", "Plane " + this.getId() + " is preparing for next flight");
         this.setId(0);
     }
 

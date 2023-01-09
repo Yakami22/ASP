@@ -14,9 +14,9 @@ public class LoadPassengers extends SimEvent {
         Airplane plane = (Airplane) this.getEntity();
         plane.loadPassengers();
 
-        // Create ride to track event
-        RideToTrack ride = new RideToTrack(plane, this.getEntity().getEngine().getCurrentDate());
+        // Create notify departure event
+        NotifyDeparture notifyDeparture = new NotifyDeparture(plane, this.getEntity().getEngine().getCurrentDate());
         // Add event to the queue
-        plane.getEngine().postEvent(ride);
+        plane.getEngine().postEvent(notifyDeparture);
     }
 }
