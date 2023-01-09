@@ -25,13 +25,7 @@ public class Terminal {
         setAvailable(false);
         setCurrentAirplane(airplane);
         airplane.setTerminal(this);
-        // Make runway & taxiway in available
-        airplane.getTaxiwayIn().setAvailable(true);
-        airplane.getRunway().setAvailable(true);
         Logger.Information(this, "acceptPlane", "Terminal " + this.id + " accepted plane " + airplane.getId());
-        Logger.Information(this, "acceptPlane", "Runway " + airplane.getRunway().getId() + " & taxiway in " + airplane.getTaxiwayIn().getId() + " are now available");
-        // Set plane id to 0
-        airplane.setId(0);
     }
 
     public Airport getAirport() {

@@ -49,6 +49,14 @@ public class ControlTower {
         Logger.Information(this, "authorizeTakeOff", "Plane " + plane.getId() + " was given authorization to take off on runway " + plane.getRunway().getId());
     }
 
+    public void notifyLanding(Airplane plane) {
+        // Make runway & taxi way in available
+        plane.getRunway().setAvailable(true);
+        plane.getTaxiwayIn().setAvailable(true);
+        Logger.Information(this, "notifyLanding", "Plane " + plane.getId() + "'s flight is over");
+        Logger.Information(this, "acceptPlane", "Runway " + plane.getRunway().getId() + " & taxiway in " + plane.getTaxiwayIn().getId() + " are now available");
+    }
+
     public void notifyTakeOff(Airplane plane) {
         // Make runway available
         plane.getRunway().setAvailable(true);

@@ -13,22 +13,11 @@ public class Landing extends SimEvent {
     @Override
     public void process() {
         Airplane plane = (Airplane) this.getEntity();
-        // Get an id from control tower
-        plane.getAirport().getTower().identifyAirplane(plane, "land");
-        // Check if a runway & taxiway in are available
-        // If it is land & create ride to terminal event
-        TaxiwayIn taxiwayIn = plane.getAirport().findTaxiwayIn(plane);
-        Runway runway = plane.getAirport().findRunway(plane);
-        if (runway!=null && taxiwayIn!=null) {
-            plane.getAirport().getTower().authorizeLanding(plane, taxiwayIn, runway);
-            // Ride to terminal
-            RideToTerminal ride = new RideToTerminal(plane, this.getEntity().getEngine().getCurrentDate());
-            // Add event to the queue
-            plane.getEngine().postEvent(ride);
-        }
-        // If not, reschedule landing event
-        else {
-            plane.getAirport().getTower().denyLanding(plane);
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofSeconds(20)));
-        }
-}}
+        plane.land();
+
+        // Create event ride to terminal
+        RideToTerminal ride = new RideToTerminal(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(2)));
+        // Add event to the queue
+        plane.getEngine().postEvent(ride);
+    }
+}

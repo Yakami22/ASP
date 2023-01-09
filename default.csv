@@ -1,129 +1,293 @@
 Scenario;Replique;Temps Reel;Temps Logique;Niveau de Log;Nom Objet;Fonction;Message
-DefaultScenario;0;2023-01-09T17:46:28.160994300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;Airport;Goetghebeur International Airport is now opened !
-DefaultScenario;0;2023-01-09T17:46:28.831721100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
-DefaultScenario;0;2023-01-09T17:46:28.831721100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 1
-DefaultScenario;0;2023-01-09T17:46:28.847364500Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiwayIn;Taxiway in 1 is available for plane 1
-DefaultScenario;0;2023-01-09T17:46:28.847364500Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 1
-DefaultScenario;0;2023-01-09T17:46:28.847364500Z;01/01/2015 00:00:00;Information;airport.Runway@69997e9d;acceptPlane;Plane 1 is assigned runway 1
-DefaultScenario;0;2023-01-09T17:46:28.847364500Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@793be5ca;acceptPlane;Plane 1 is assigned taxiway in 1
-DefaultScenario;0;2023-01-09T17:46:28.847364500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 1 was given authorization to land
-DefaultScenario;0;2023-01-09T17:46:28.878580600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
-DefaultScenario;0;2023-01-09T17:46:28.878580600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 2
-DefaultScenario;0;2023-01-09T17:46:28.878580600Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 2 is available for plane 2
-DefaultScenario;0;2023-01-09T17:46:28.878580600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;denyLanding;Plane 2 was denied landing
-DefaultScenario;0;2023-01-09T17:46:28.894231900Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTerminal;Terminal 1 is available for plane 1
-DefaultScenario;0;2023-01-09T17:46:28.894231900Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Terminal 1 accepted plane 1
-DefaultScenario;0;2023-01-09T17:46:28.894231900Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Runway 1 & taxiway in 1 are now available
-DefaultScenario;0;2023-01-09T17:46:28.916569600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to taxi way out
-DefaultScenario;0;2023-01-09T17:46:28.916569600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 3
-DefaultScenario;0;2023-01-09T17:46:28.916569600Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiWayOut;Taxiway out 1 is available for plane 3
-DefaultScenario;0;2023-01-09T17:46:28.916569600Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@33990a0c;acceptPlane;Plane 3 is assigned taxiway out 1
-DefaultScenario;0;2023-01-09T17:46:28.932195200Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 3
-DefaultScenario;0;2023-01-09T17:46:28.932195200Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 3 was given authorization to take off on runway 1
-DefaultScenario;0;2023-01-09T17:46:28.932195200Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 3 just took off
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 4
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiwayIn;Taxiway in 1 is available for plane 4
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 4
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.Runway@69997e9d;acceptPlane;Plane 4 is assigned runway 1
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@793be5ca;acceptPlane;Plane 4 is assigned taxiway in 1
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 4 was given authorization to land
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTerminal;Terminal 1 is available for plane 4
-DefaultScenario;0;2023-01-09T17:46:28.947817100Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Terminal 1 accepted plane 4
-DefaultScenario;0;2023-01-09T17:46:28.963469600Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Runway 1 & taxiway in 1 are now available
-DefaultScenario;0;2023-01-09T17:46:28.963469600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to taxi way out
-DefaultScenario;0;2023-01-09T17:46:28.963469600Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 5
-DefaultScenario;0;2023-01-09T17:46:28.963469600Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiWayOut;Taxiway out 1 is available for plane 5
-DefaultScenario;0;2023-01-09T17:46:28.963469600Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@33990a0c;acceptPlane;Plane 5 is assigned taxiway out 1
-DefaultScenario;0;2023-01-09T17:46:28.979061500Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 5
-DefaultScenario;0;2023-01-09T17:46:28.979061500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 5 was given authorization to take off on runway 1
-DefaultScenario;0;2023-01-09T17:46:28.979061500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 5 just took off
-DefaultScenario;0;2023-01-09T17:46:28.979061500Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 6
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiwayIn;Taxiway in 1 is available for plane 6
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 6
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.Runway@69997e9d;acceptPlane;Plane 6 is assigned runway 1
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@793be5ca;acceptPlane;Plane 6 is assigned taxiway in 1
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 6 was given authorization to land
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 7
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 2 is available for plane 7
-DefaultScenario;0;2023-01-09T17:46:28.994712100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;denyLanding;Plane 7 was denied landing
-DefaultScenario;0;2023-01-09T17:46:29.010335300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
-DefaultScenario;0;2023-01-09T17:46:29.010335300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 8
-DefaultScenario;0;2023-01-09T17:46:29.010335300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 2 is available for plane 8
-DefaultScenario;0;2023-01-09T17:46:29.010335300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;denyLanding;Plane 8 was denied landing
-DefaultScenario;0;2023-01-09T17:46:29.016841200Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTerminal;Terminal 1 is available for plane 6
-DefaultScenario;0;2023-01-09T17:46:29.016841200Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Terminal 1 accepted plane 6
-DefaultScenario;0;2023-01-09T17:46:29.016841200Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Runway 1 & taxiway in 1 are now available
-DefaultScenario;0;2023-01-09T17:46:29.032498700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to taxi way out
-DefaultScenario;0;2023-01-09T17:46:29.032498700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 9
-DefaultScenario;0;2023-01-09T17:46:29.032498700Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiWayOut;Taxiway out 1 is available for plane 9
-DefaultScenario;0;2023-01-09T17:46:29.032498700Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@33990a0c;acceptPlane;Plane 9 is assigned taxiway out 1
-DefaultScenario;0;2023-01-09T17:46:29.032498700Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 9
-DefaultScenario;0;2023-01-09T17:46:29.032498700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 9 was given authorization to take off on runway 1
-DefaultScenario;0;2023-01-09T17:46:29.032498700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 9 just took off
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to land
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 10
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiwayIn;Taxiway in 1 is available for plane 10
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 10
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.Runway@69997e9d;acceptPlane;Plane 10 is assigned runway 1
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@793be5ca;acceptPlane;Plane 10 is assigned taxiway in 1
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 10 was given authorization to land
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTerminal;Terminal 1 is available for plane 10
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Terminal 1 accepted plane 10
-DefaultScenario;0;2023-01-09T17:46:29.048089Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Runway 1 & taxiway in 1 are now available
-DefaultScenario;0;2023-01-09T17:46:29.063739100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to taxi way out
-DefaultScenario;0;2023-01-09T17:46:29.063739100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 11
-DefaultScenario;0;2023-01-09T17:46:29.063739100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiWayOut;Taxiway out 1 is available for plane 11
-DefaultScenario;0;2023-01-09T17:46:29.063739100Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@33990a0c;acceptPlane;Plane 11 is assigned taxiway out 1
-DefaultScenario;0;2023-01-09T17:46:29.063739100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 11
-DefaultScenario;0;2023-01-09T17:46:29.063739100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 11 was given authorization to take off on runway 1
-DefaultScenario;0;2023-01-09T17:46:29.063739100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 11 just took off
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiwayIn;Taxiway in 1 is available for plane 2
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 2
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.Runway@69997e9d;acceptPlane;Plane 2 is assigned runway 1
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@793be5ca;acceptPlane;Plane 2 is assigned taxiway in 1
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 2 was given authorization to land
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTerminal;Terminal 1 is available for plane 2
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Terminal 1 accepted plane 2
-DefaultScenario;0;2023-01-09T17:46:29.079332300Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Runway 1 & taxiway in 1 are now available
-DefaultScenario;0;2023-01-09T17:46:29.094982700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to taxi way out
-DefaultScenario;0;2023-01-09T17:46:29.094982700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 12
-DefaultScenario;0;2023-01-09T17:46:29.094982700Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiWayOut;Taxiway out 1 is available for plane 12
-DefaultScenario;0;2023-01-09T17:46:29.094982700Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@33990a0c;acceptPlane;Plane 12 is assigned taxiway out 1
-DefaultScenario;0;2023-01-09T17:46:29.094982700Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 12
-DefaultScenario;0;2023-01-09T17:46:29.094982700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 12 was given authorization to take off on runway 1
-DefaultScenario;0;2023-01-09T17:46:29.094982700Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 12 just took off
-DefaultScenario;0;2023-01-09T17:46:29.110576800Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiwayIn;Taxiway in 1 is available for plane 7
-DefaultScenario;0;2023-01-09T17:46:29.117110900Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 7
-DefaultScenario;0;2023-01-09T17:46:29.117110900Z;01/01/2015 00:00:00;Information;airport.Runway@69997e9d;acceptPlane;Plane 7 is assigned runway 1
-DefaultScenario;0;2023-01-09T17:46:29.117110900Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@793be5ca;acceptPlane;Plane 7 is assigned taxiway in 1
-DefaultScenario;0;2023-01-09T17:46:29.117110900Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 7 was given authorization to land
-DefaultScenario;0;2023-01-09T17:46:29.117110900Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 2 is available for plane 8
-DefaultScenario;0;2023-01-09T17:46:29.117110900Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;denyLanding;Plane 8 was denied landing
-DefaultScenario;0;2023-01-09T17:46:29.117110900Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTerminal;Terminal 1 is available for plane 7
-DefaultScenario;0;2023-01-09T17:46:29.132736300Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Terminal 1 accepted plane 7
-DefaultScenario;0;2023-01-09T17:46:29.132736300Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Runway 1 & taxiway in 1 are now available
-DefaultScenario;0;2023-01-09T17:46:29.132736300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to taxi way out
-DefaultScenario;0;2023-01-09T17:46:29.132736300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 13
-DefaultScenario;0;2023-01-09T17:46:29.132736300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiWayOut;Taxiway out 1 is available for plane 13
-DefaultScenario;0;2023-01-09T17:46:29.132736300Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@33990a0c;acceptPlane;Plane 13 is assigned taxiway out 1
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 13
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 13 was given authorization to take off on runway 1
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 13 just took off
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiwayIn;Taxiway in 1 is available for plane 8
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 8
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.Runway@69997e9d;acceptPlane;Plane 8 is assigned runway 1
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@793be5ca;acceptPlane;Plane 8 is assigned taxiway in 1
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeLanding;Plane 8 was given authorization to land
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTerminal;Terminal 1 is available for plane 8
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Terminal 1 accepted plane 8
-DefaultScenario;0;2023-01-09T17:46:29.148358300Z;01/01/2015 00:00:00;Information;airport.Terminal@37654521;acceptPlane;Runway 1 & taxiway in 1 are now available
-DefaultScenario;0;2023-01-09T17:46:29.164009100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Unidentified airplane wants to ride to taxi way out
-DefaultScenario;0;2023-01-09T17:46:29.164009100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;identifyAirplane;Plane was assigned id 14
-DefaultScenario;0;2023-01-09T17:46:29.164009100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findTaxiWayOut;Taxiway out 1 is available for plane 14
-DefaultScenario;0;2023-01-09T17:46:29.164009100Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@33990a0c;acceptPlane;Plane 14 is assigned taxiway out 1
-DefaultScenario;0;2023-01-09T17:46:29.164009100Z;01/01/2015 00:00:00;Information;airport.Airport@13b13b5d;findRunway;Runway 1 is available for plane 14
-DefaultScenario;0;2023-01-09T17:46:29.164009100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;authorizeTakeOff;Plane 14 was given authorization to take off on runway 1
-DefaultScenario;0;2023-01-09T17:46:29.164009100Z;01/01/2015 00:00:00;Information;airport.ControlTower@193f604a;notifyTakeOff;Plane 14 just took off
+DefaultScenario;0;2023-01-09T18:56:38.194546700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;Airport;Goetghebeur International Airport is now opened !
+DefaultScenario;0;2023-01-09T18:56:38.247868600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to notify its arrival
+DefaultScenario;0;2023-01-09T18:56:38.247868600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 1
+DefaultScenario;0;2023-01-09T18:56:38.247868600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiwayIn;Taxiway in 1 is available for plane 1
+DefaultScenario;0;2023-01-09T18:56:38.247868600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 1
+DefaultScenario;0;2023-01-09T18:56:38.247868600Z;01/01/2015 00:00:00;Information;airport.Runway@37654521;acceptPlane;Plane 1 is assigned runway 1
+DefaultScenario;0;2023-01-09T18:56:38.247868600Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@15aab8c6;acceptPlane;Plane 1 is assigned taxiway in 1
+DefaultScenario;0;2023-01-09T18:56:38.247868600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeLanding;Plane 1 was given authorization to land
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to notify its arrival
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 2
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 2
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 2 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to notify its arrival
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 3
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.263518300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.279143300Z;01/01/2015 00:00:00;Information;airport.Airplane@4de4b452;approach;Plane 1 has started its approach
+DefaultScenario;0;2023-01-09T18:56:38.294766200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 2
+DefaultScenario;0;2023-01-09T18:56:38.294766200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 2 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.294766200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to notify its arrival
+DefaultScenario;0;2023-01-09T18:56:38.294766200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 4
+DefaultScenario;0;2023-01-09T18:56:38.294766200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.294766200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.310384600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.310384600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.316921700Z;01/01/2015 00:00:00;Information;airport.Airplane@4de4b452;land;Plane 1 just landed on runway airport.Runway@37654521
+DefaultScenario;0;2023-01-09T18:56:38.316921700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 2
+DefaultScenario;0;2023-01-09T18:56:38.316921700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 2 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.332576400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to notify its arrival
+DefaultScenario;0;2023-01-09T18:56:38.332576400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 5
+DefaultScenario;0;2023-01-09T18:56:38.332576400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.332576400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.332576400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.332576400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.348201800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.348201800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.348201800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to notify its arrival
+DefaultScenario;0;2023-01-09T18:56:38.348201800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 6
+DefaultScenario;0;2023-01-09T18:56:38.348201800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.348201800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 6 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.363821800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTerminal;Terminal 1 is available for plane 1
+DefaultScenario;0;2023-01-09T18:56:38.363821800Z;01/01/2015 00:00:00;Information;airport.Terminal@4d02f94e;acceptPlane;Terminal 1 accepted plane 1
+DefaultScenario;0;2023-01-09T18:56:38.363821800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyLanding;Plane 1's flight is over
+DefaultScenario;0;2023-01-09T18:56:38.363821800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;acceptPlane;Runway 1 & taxiway in 1 are now available
+DefaultScenario;0;2023-01-09T18:56:38.363821800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiwayIn;Taxiway in 1 is available for plane 2
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 2
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.Runway@37654521;acceptPlane;Plane 2 is assigned runway 1
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@15aab8c6;acceptPlane;Plane 2 is assigned taxiway in 1
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeLanding;Plane 2 was given authorization to land
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.379445200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.395035200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.395035200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.395035200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to notify its arrival
+DefaultScenario;0;2023-01-09T18:56:38.395035200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 7
+DefaultScenario;0;2023-01-09T18:56:38.395035200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 7
+DefaultScenario;0;2023-01-09T18:56:38.395035200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 7 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.410691500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.410691500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 6 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.417196600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.417196600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.417196600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.417196600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.432823400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.432823400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.432823400Z;01/01/2015 00:00:00;Information;airport.Airplane@1e683a3e;approach;Plane 2 has started its approach
+DefaultScenario;0;2023-01-09T18:56:38.448444800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 7
+DefaultScenario;0;2023-01-09T18:56:38.448444800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 7 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.448444800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.448444800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 6 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.464105400Z;01/01/2015 00:00:00;Information;airport.Airplane@4de4b452;unloadPassengers;Plane 1 is unloading its passengers
+DefaultScenario;0;2023-01-09T18:56:38.464105400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.464105400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.479715600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.479715600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.479715600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.479715600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.495339Z;01/01/2015 00:00:00;Information;airport.Airplane@1e683a3e;land;Plane 2 just landed on runway airport.Runway@37654521
+DefaultScenario;0;2023-01-09T18:56:38.495339Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 7
+DefaultScenario;0;2023-01-09T18:56:38.495339Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 7 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.510961900Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.510961900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 6 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.517467200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.517467200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.517467200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.517467200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.533092600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.533092600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.533092600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTerminal;Terminal 2 is available for plane 2
+DefaultScenario;0;2023-01-09T18:56:38.533092600Z;01/01/2015 00:00:00;Information;airport.Terminal@7a419da4;acceptPlane;Terminal 2 accepted plane 2
+DefaultScenario;0;2023-01-09T18:56:38.533092600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyLanding;Plane 2's flight is over
+DefaultScenario;0;2023-01-09T18:56:38.533092600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;acceptPlane;Runway 1 & taxiway in 1 are now available
+DefaultScenario;0;2023-01-09T18:56:38.533092600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiwayIn;Taxiway in 1 is available for plane 7
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 7
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.Runway@37654521;acceptPlane;Plane 7 is assigned runway 1
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@15aab8c6;acceptPlane;Plane 7 is assigned taxiway in 1
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeLanding;Plane 7 was given authorization to land
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 6 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.548746300Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.564366600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.564366600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.564366600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.564366600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.579992400Z;01/01/2015 00:00:00;Information;airport.Airplane@14555e0a;approach;Plane 7 has started its approach
+DefaultScenario;0;2023-01-09T18:56:38.579992400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.579992400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 6 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.595607700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.595607700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.595607700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.595607700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.595607700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.595607700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.611224Z;01/01/2015 00:00:00;Information;airport.Airplane@14555e0a;land;Plane 7 just landed on runway airport.Runway@37654521
+DefaultScenario;0;2023-01-09T18:56:38.617729800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.617729800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 6 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.617729800Z;01/01/2015 00:00:00;Information;airport.Airplane@1e683a3e;unloadPassengers;Plane 2 is unloading its passengers
+DefaultScenario;0;2023-01-09T18:56:38.633385600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.633385600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.633385600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.633385600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.649006200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.649006200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.649006200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTerminal;Terminal 3 is available for plane 7
+DefaultScenario;0;2023-01-09T18:56:38.649006200Z;01/01/2015 00:00:00;Information;airport.Terminal@4bb33f74;acceptPlane;Terminal 3 accepted plane 7
+DefaultScenario;0;2023-01-09T18:56:38.649006200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyLanding;Plane 7's flight is over
+DefaultScenario;0;2023-01-09T18:56:38.649006200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;acceptPlane;Runway 1 & taxiway in 1 are now available
+DefaultScenario;0;2023-01-09T18:56:38.664631200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiwayIn;Taxiway in 1 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.664631200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.664631200Z;01/01/2015 00:00:00;Information;airport.Runway@37654521;acceptPlane;Plane 6 is assigned runway 1
+DefaultScenario;0;2023-01-09T18:56:38.664631200Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@15aab8c6;acceptPlane;Plane 6 is assigned taxiway in 1
+DefaultScenario;0;2023-01-09T18:56:38.664631200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeLanding;Plane 6 was given authorization to land
+DefaultScenario;0;2023-01-09T18:56:38.664631200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.664631200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.680253700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.680253700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.680253700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.680253700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.680253700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.680253700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.695842100Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.695842100Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.695842100Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.695842100Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.711492800Z;01/01/2015 00:00:00;Information;airport.Airplane@759d26fb;approach;Plane 6 has started its approach
+DefaultScenario;0;2023-01-09T18:56:38.718026400Z;01/01/2015 00:00:00;Information;airport.Airplane@14555e0a;unloadPassengers;Plane 7 is unloading its passengers
+DefaultScenario;0;2023-01-09T18:56:38.718026400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.718026400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.733680500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.733680500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.733680500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.733680500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.749303500Z;01/01/2015 00:00:00;Information;airport.Airplane@759d26fb;land;Plane 6 just landed on runway airport.Runway@37654521
+DefaultScenario;0;2023-01-09T18:56:38.749303500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.749303500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 5 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.764895800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.764895800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.764895800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.764895800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.764895800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTerminal;Terminal 4 is available for plane 6
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.Terminal@3c73951;acceptPlane;Terminal 4 accepted plane 6
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyLanding;Plane 6's flight is over
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;acceptPlane;Runway 1 & taxiway in 1 are now available
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiwayIn;Taxiway in 1 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.Runway@37654521;acceptPlane;Plane 5 is assigned runway 1
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@15aab8c6;acceptPlane;Plane 5 is assigned taxiway in 1
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeLanding;Plane 5 was given authorization to land
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.780545600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.796168500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.796168500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.796168500Z;01/01/2015 00:00:00;Information;airport.Airplane@759d26fb;unloadPassengers;Plane 6 is unloading its passengers
+DefaultScenario;0;2023-01-09T18:56:38.811793Z;01/01/2015 00:00:00;Information;airport.Airplane@3d5c822d;approach;Plane 5 has started its approach
+DefaultScenario;0;2023-01-09T18:56:38.818328200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.818328200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.818328200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.818328200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.833980200Z;01/01/2015 00:00:00;Information;airport.Airplane@3d5c822d;land;Plane 5 just landed on runway airport.Runway@37654521
+DefaultScenario;0;2023-01-09T18:56:38.833980200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.833980200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 4 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.833980200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.833980200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTerminal;Terminal 5 is available for plane 5
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.Terminal@6f46426d;acceptPlane;Terminal 5 accepted plane 5
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyLanding;Plane 5's flight is over
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;acceptPlane;Runway 1 & taxiway in 1 are now available
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiwayIn;Taxiway in 1 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.Runway@37654521;acceptPlane;Plane 4 is assigned runway 1
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@15aab8c6;acceptPlane;Plane 4 is assigned taxiway in 1
+DefaultScenario;0;2023-01-09T18:56:38.849605600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeLanding;Plane 4 was given authorization to land
+DefaultScenario;0;2023-01-09T18:56:38.865226400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.865226400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.865226400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.865226400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.880818500Z;01/01/2015 00:00:00;Information;airport.Airplane@73700b80;approach;Plane 4 has started its approach
+DefaultScenario;0;2023-01-09T18:56:38.880818500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.880818500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.896481200Z;01/01/2015 00:00:00;Information;airport.Airplane@3d5c822d;unloadPassengers;Plane 5 is unloading its passengers
+DefaultScenario;0;2023-01-09T18:56:38.896481200Z;01/01/2015 00:00:00;Information;airport.Airplane@4de4b452;preparation;Plane 1is preparing for next flight
+DefaultScenario;0;2023-01-09T18:56:38.918610900Z;01/01/2015 00:00:00;Information;airport.Airplane@73700b80;land;Plane 4 just landed on runway airport.Runway@37654521
+DefaultScenario;0;2023-01-09T18:56:38.918610900Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.918610900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;denyLanding;Plane 3 was denied landing
+DefaultScenario;0;2023-01-09T18:56:38.918610900Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTerminal;Terminal 6 is available for plane 4
+DefaultScenario;0;2023-01-09T18:56:38.918610900Z;01/01/2015 00:00:00;Information;airport.Terminal@10d307f1;acceptPlane;Terminal 6 accepted plane 4
+DefaultScenario;0;2023-01-09T18:56:38.918610900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyLanding;Plane 4's flight is over
+DefaultScenario;0;2023-01-09T18:56:38.918610900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;acceptPlane;Runway 1 & taxiway in 1 are now available
+DefaultScenario;0;2023-01-09T18:56:38.934267800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiwayIn;Taxiway in 1 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.934267800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:38.934267800Z;01/01/2015 00:00:00;Information;airport.Runway@37654521;acceptPlane;Plane 3 is assigned runway 1
+DefaultScenario;0;2023-01-09T18:56:38.934267800Z;01/01/2015 00:00:00;Information;airport.TaxiwayIn@15aab8c6;acceptPlane;Plane 3 is assigned taxiway in 1
+DefaultScenario;0;2023-01-09T18:56:38.934267800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeLanding;Plane 3 was given authorization to land
+DefaultScenario;0;2023-01-09T18:56:38.949858300Z;01/01/2015 00:00:00;Information;airport.Airplane@4d5b6aac;approach;Plane 3 has started its approach
+DefaultScenario;0;2023-01-09T18:56:38.949858300Z;01/01/2015 00:00:00;Information;airport.Airplane@73700b80;unloadPassengers;Plane 4 is unloading its passengers
+DefaultScenario;0;2023-01-09T18:56:38.949858300Z;01/01/2015 00:00:00;Information;airport.Airplane@4d5b6aac;land;Plane 3 just landed on runway airport.Runway@37654521
+DefaultScenario;0;2023-01-09T18:56:38.965510700Z;01/01/2015 00:00:00;Information;airport.Airplane@1e683a3e;preparation;Plane 2is preparing for next flight
+DefaultScenario;0;2023-01-09T18:56:38.965510700Z;01/01/2015 00:00:00;Information;airport.RideToTerminal@3e84448c;process;All terminals are currently unavailable and cannot accept plane 3
+DefaultScenario;0;2023-01-09T18:56:38.981131400Z;01/01/2015 00:00:00;Information;airport.RideToTerminal@3e84448c;process;All terminals are currently unavailable and cannot accept plane 3
+DefaultScenario;0;2023-01-09T18:56:38.981131400Z;01/01/2015 00:00:00;Information;airport.RideToTerminal@3e84448c;process;All terminals are currently unavailable and cannot accept plane 3
+DefaultScenario;0;2023-01-09T18:56:38.996754800Z;01/01/2015 00:00:00;Information;airport.Airplane@14555e0a;preparation;Plane 7is preparing for next flight
+DefaultScenario;0;2023-01-09T18:56:38.996754800Z;01/01/2015 00:00:00;Information;airport.RideToTerminal@3e84448c;process;All terminals are currently unavailable and cannot accept plane 3
+DefaultScenario;0;2023-01-09T18:56:39.012374100Z;01/01/2015 00:00:00;Information;airport.RideToTerminal@3e84448c;process;All terminals are currently unavailable and cannot accept plane 3
+DefaultScenario;0;2023-01-09T18:56:39.018910Z;01/01/2015 00:00:00;Information;airport.Airplane@759d26fb;preparation;Plane 6is preparing for next flight
+DefaultScenario;0;2023-01-09T18:56:39.018910Z;01/01/2015 00:00:00;Information;airport.RideToTerminal@3e84448c;process;All terminals are currently unavailable and cannot accept plane 3
+DefaultScenario;0;2023-01-09T18:56:39.018910Z;01/01/2015 00:00:00;Information;airport.Airplane@4de4b452;loadPassengers;Unidentified plane is loading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.034534700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to ride to taxi way out
+DefaultScenario;0;2023-01-09T18:56:39.034534700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 8
+DefaultScenario;0;2023-01-09T18:56:39.034534700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiWayOut;Taxiway out 1 is available for plane 8
+DefaultScenario;0;2023-01-09T18:56:39.034534700Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@429bffaa;acceptPlane;Plane 8 is assigned taxiway out 1
+DefaultScenario;0;2023-01-09T18:56:39.050188400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 2 is available for plane 8
+DefaultScenario;0;2023-01-09T18:56:39.050188400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeTakeOff;Plane 8 was given authorization to take off on runway 1
+DefaultScenario;0;2023-01-09T18:56:39.050188400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyTakeOff;Plane 8 just took off
+DefaultScenario;0;2023-01-09T18:56:39.050188400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTerminal;Terminal 1 is available for plane 3
+DefaultScenario;0;2023-01-09T18:56:39.050188400Z;01/01/2015 00:00:00;Information;airport.Terminal@4d02f94e;acceptPlane;Terminal 1 accepted plane 3
+DefaultScenario;0;2023-01-09T18:56:39.050188400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyLanding;Plane 3's flight is over
+DefaultScenario;0;2023-01-09T18:56:39.050188400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;acceptPlane;Runway 1 & taxiway in 1 are now available
+DefaultScenario;0;2023-01-09T18:56:39.065809700Z;01/01/2015 00:00:00;Information;airport.Airplane@4d5b6aac;unloadPassengers;Plane 3 is unloading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.065809700Z;01/01/2015 00:00:00;Information;airport.Airplane@1e683a3e;loadPassengers;Unidentified plane is loading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.065809700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to ride to taxi way out
+DefaultScenario;0;2023-01-09T18:56:39.065809700Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 9
+DefaultScenario;0;2023-01-09T18:56:39.065809700Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiWayOut;Taxiway out 1 is available for plane 9
+DefaultScenario;0;2023-01-09T18:56:39.065809700Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@429bffaa;acceptPlane;Plane 9 is assigned taxiway out 1
+DefaultScenario;0;2023-01-09T18:56:39.081428900Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 9
+DefaultScenario;0;2023-01-09T18:56:39.081428900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeTakeOff;Plane 9 was given authorization to take off on runway 1
+DefaultScenario;0;2023-01-09T18:56:39.081428900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyTakeOff;Plane 9 just took off
+DefaultScenario;0;2023-01-09T18:56:39.081428900Z;01/01/2015 00:00:00;Information;airport.Airplane@3d5c822d;preparation;Plane 5is preparing for next flight
+DefaultScenario;0;2023-01-09T18:56:39.097051100Z;01/01/2015 00:00:00;Information;airport.Airplane@14555e0a;loadPassengers;Unidentified plane is loading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.097051100Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to ride to taxi way out
+DefaultScenario;0;2023-01-09T18:56:39.097051100Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 10
+DefaultScenario;0;2023-01-09T18:56:39.097051100Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiWayOut;Taxiway out 1 is available for plane 10
+DefaultScenario;0;2023-01-09T18:56:39.097051100Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@429bffaa;acceptPlane;Plane 10 is assigned taxiway out 1
+DefaultScenario;0;2023-01-09T18:56:39.112644800Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 10
+DefaultScenario;0;2023-01-09T18:56:39.112644800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeTakeOff;Plane 10 was given authorization to take off on runway 1
+DefaultScenario;0;2023-01-09T18:56:39.112644800Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyTakeOff;Plane 10 just took off
+DefaultScenario;0;2023-01-09T18:56:39.119181800Z;01/01/2015 00:00:00;Information;airport.Airplane@73700b80;preparation;Plane 4is preparing for next flight
+DefaultScenario;0;2023-01-09T18:56:39.119181800Z;01/01/2015 00:00:00;Information;airport.Airplane@759d26fb;loadPassengers;Unidentified plane is loading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.134838500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to ride to taxi way out
+DefaultScenario;0;2023-01-09T18:56:39.134838500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 11
+DefaultScenario;0;2023-01-09T18:56:39.134838500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiWayOut;Taxiway out 1 is available for plane 11
+DefaultScenario;0;2023-01-09T18:56:39.134838500Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@429bffaa;acceptPlane;Plane 11 is assigned taxiway out 1
+DefaultScenario;0;2023-01-09T18:56:39.134838500Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 11
+DefaultScenario;0;2023-01-09T18:56:39.134838500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeTakeOff;Plane 11 was given authorization to take off on runway 1
+DefaultScenario;0;2023-01-09T18:56:39.134838500Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyTakeOff;Plane 11 just took off
+DefaultScenario;0;2023-01-09T18:56:39.150429600Z;01/01/2015 00:00:00;Information;airport.Airplane@3d5c822d;loadPassengers;Unidentified plane is loading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.150429600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to ride to taxi way out
+DefaultScenario;0;2023-01-09T18:56:39.150429600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 12
+DefaultScenario;0;2023-01-09T18:56:39.150429600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiWayOut;Taxiway out 1 is available for plane 12
+DefaultScenario;0;2023-01-09T18:56:39.150429600Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@429bffaa;acceptPlane;Plane 12 is assigned taxiway out 1
+DefaultScenario;0;2023-01-09T18:56:39.166079400Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 12
+DefaultScenario;0;2023-01-09T18:56:39.166079400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeTakeOff;Plane 12 was given authorization to take off on runway 1
+DefaultScenario;0;2023-01-09T18:56:39.166079400Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyTakeOff;Plane 12 just took off
+DefaultScenario;0;2023-01-09T18:56:39.166079400Z;01/01/2015 00:00:00;Information;airport.Airplane@4d5b6aac;preparation;Plane 3is preparing for next flight
+DefaultScenario;0;2023-01-09T18:56:39.166079400Z;01/01/2015 00:00:00;Information;airport.Airplane@73700b80;loadPassengers;Unidentified plane is loading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.181673200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to ride to taxi way out
+DefaultScenario;0;2023-01-09T18:56:39.181673200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 13
+DefaultScenario;0;2023-01-09T18:56:39.181673200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiWayOut;Taxiway out 1 is available for plane 13
+DefaultScenario;0;2023-01-09T18:56:39.181673200Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@429bffaa;acceptPlane;Plane 13 is assigned taxiway out 1
+DefaultScenario;0;2023-01-09T18:56:39.181673200Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 13
+DefaultScenario;0;2023-01-09T18:56:39.181673200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeTakeOff;Plane 13 was given authorization to take off on runway 1
+DefaultScenario;0;2023-01-09T18:56:39.181673200Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyTakeOff;Plane 13 just took off
+DefaultScenario;0;2023-01-09T18:56:39.197323900Z;01/01/2015 00:00:00;Information;airport.Airplane@4d5b6aac;loadPassengers;Unidentified plane is loading its passengers
+DefaultScenario;0;2023-01-09T18:56:39.197323900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Unidentified airplane wants to ride to taxi way out
+DefaultScenario;0;2023-01-09T18:56:39.197323900Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;identifyAirplane;Plane was assigned id 14
+DefaultScenario;0;2023-01-09T18:56:39.197323900Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findTaxiWayOut;Taxiway out 1 is available for plane 14
+DefaultScenario;0;2023-01-09T18:56:39.197323900Z;01/01/2015 00:00:00;Information;airport.TaxiwayOut@429bffaa;acceptPlane;Plane 14 is assigned taxiway out 1
+DefaultScenario;0;2023-01-09T18:56:39.212917600Z;01/01/2015 00:00:00;Information;airport.Airport@3315d2d7;findRunway;Runway 1 is available for plane 14
+DefaultScenario;0;2023-01-09T18:56:39.212917600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;authorizeTakeOff;Plane 14 was given authorization to take off on runway 1
+DefaultScenario;0;2023-01-09T18:56:39.212917600Z;01/01/2015 00:00:00;Information;airport.ControlTower@6bedbc4d;notifyTakeOff;Plane 14 just took off

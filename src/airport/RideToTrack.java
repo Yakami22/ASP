@@ -28,7 +28,7 @@ public class RideToTrack extends SimEvent {
         // If not, reschedule event
         else {
             plane.getAirport().getTower().denyExit(plane);
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofSeconds(20)));
+            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
         }
     }
 }

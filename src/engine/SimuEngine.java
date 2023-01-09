@@ -1,6 +1,7 @@
 package engine;
 
 import enstabretagne.base.logger.Logger;
+import enstabretagne.base.math.MoreRandom;
 import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.simulation.basics.SortedList;
 
@@ -13,6 +14,7 @@ public class SimuEngine implements Runnable {
     final private List<SimEntity> entityList;
     private LogicalDateTime currentDate;
     final private LogicalDateTime endDate;
+    final private MoreRandom random = new MoreRandom();
 
 
     public SimuEngine(LogicalDateTime currentDate, LogicalDateTime endDate) {
@@ -32,6 +34,10 @@ public class SimuEngine implements Runnable {
 
     public LogicalDateTime getCurrentDate() {
         return currentDate;
+    }
+
+    public MoreRandom getRandom() {
+        return random;
     }
 
     public boolean hasNextEvent() { return this.sortedEventList.size() > 0;}

@@ -20,14 +20,16 @@ public class RideToTerminal extends SimEvent {
         if (terminal == null) {
             Logger.Information(this, "process", "All terminals are currently unavailable and cannot accept plane " + plane.getId());
             // Reschedule
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofSeconds(20)));
+            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
         }
-        // Else, accept plane and create ride to track event
+        // Else, accept plane and create unload passengers event
         else {
             terminal.acceptPlane(plane);
-            RideToTrack ride = new RideToTrack(plane, this.getEntity().getEngine().getCurrentDate());
+            plane.flightOver();
+            long random = (long) plane.getEngine().getRandom().nextUniform(2, 6);
+            UnloadPassengers unload = new UnloadPassengers(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(random)));
             // Add event to the queue
-            plane.getEngine().postEvent(ride);
+            plane.getEngine().postEvent(unload);
         }
     }
 
