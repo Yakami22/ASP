@@ -2,7 +2,6 @@ package airport;
 
 import engine.SimEntity;
 import engine.SimEvent;
-import enstabretagne.base.logger.Logger;
 import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.base.time.LogicalDuration;
 
@@ -16,11 +15,12 @@ public class Landing extends SimEvent {
         Airplane plane = (Airplane) this.getEntity();
         // Get an id from control tower
         plane.getAirport().getTower().identifyAirplane(plane, "land");
-        // Check if landing lane & entry lane are available
+        // Check if a runway & taxiway in are available
         // If it is land & create ride to terminal event
-        EntryLane entryLane = plane.getAirport().findEntryLane(plane);
-        if (plane.getAirport().isLandingLaneAvailable() && entryLane!=null) {
-            plane.getAirport().getTower().authorizeLanding(plane, entryLane);
+        TaxiwayIn taxiwayIn = plane.getAirport().findTaxiwayIn(plane);
+        Runway runway = plane.getAirport().findRunway(plane);
+        if (runway!=null && taxiwayIn!=null) {
+            plane.getAirport().getTower().authorizeLanding(plane, taxiwayIn, runway);
             // Ride to terminal
             RideToTerminal ride = new RideToTerminal(plane, this.getEntity().getEngine().getCurrentDate());
             // Add event to the queue

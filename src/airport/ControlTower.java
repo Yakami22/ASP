@@ -22,10 +22,10 @@ public class ControlTower {
         }
     }
 
-    public void authorizeLanding(Airplane plane, EntryLane entryLane) {
-        // Make landing & entry lane not available
-        this.getAirport().setLandingLaneAvailable(false);
-        entryLane.acceptPlane(plane);
+    public void authorizeLanding(Airplane plane, TaxiwayIn taxiWayIn, Runway runway) {
+        // Make runway & taxiway in not available
+        runway.acceptPlane(plane);
+        taxiWayIn.acceptPlane(plane);
         Logger.Information(this, "authorizeLanding", "Plane " + plane.getId() + " was given authorization to land");
     }
 
@@ -33,9 +33,9 @@ public class ControlTower {
         Logger.Information(this, "denyLanding", "Plane " + plane.getId() + " was denied landing");
     }
 
-    public void authorizeExit(Airplane plane, ExitLane exitLane) {
-        // Make exit lane not available
-        exitLane.acceptPlane(plane);
+    public void authorizeExit(Airplane plane, TaxiwayOut taxiWayOut) {
+        // Make taxiway out not available
+        taxiWayOut.acceptPlane(plane);
     }
 
     public void denyExit(Airplane plane) {
@@ -43,15 +43,15 @@ public class ControlTower {
     }
 
     public void authorizeTakeOff(Airplane plane) {
-        // Make take off lane unavailable and exit lane available
-        this.getAirport().setTakeOffLaneAvailable(false);
-        plane.getExitLane().setAvailable(true);
-        Logger.Information(this, "authorizeTakeOff", "Plane " + plane.getId() + " was given authorization to take off");
+        // Make runway unavailable and taxiway out available
+        plane.getRunway().setAvailable(false);
+        plane.getTaxiwayOut().setAvailable(true);
+        Logger.Information(this, "authorizeTakeOff", "Plane " + plane.getId() + " was given authorization to take off on runway " + plane.getRunway().getId());
     }
 
     public void notifyTakeOff(Airplane plane) {
-        // Make take off lane available
-        this.getAirport().setTakeOffLaneAvailable(true);
+        // Make runway available
+        plane.getRunway().setAvailable(true);
         Logger.Information(this, "notifyTakeOff", "Plane " + plane.getId() + " just took off");
         plane.setId(0);
     }

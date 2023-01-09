@@ -2,32 +2,38 @@ package airport;
 
 import enstabretagne.base.logger.Logger;
 
-public class ExitLane {
+public class Runway {
     private static int totNumber = 0;
     private Airport airport;
     private boolean isAvailable;
     private Airplane currentAirplane;
     private int id;
 
-    public ExitLane(Airport airport) {
+    public Runway(Airport airport) {
         this.airport = airport;
-        // Exit is free by default
+        // Runway is free by default
         this.isAvailable = true;
-        // Increase total number and assign id to terminal
+        // Increase total number and assign id to runway
         this.id = totNumber + 1;
         totNumber = id;
-        // Add exit lane to airport's exit lanes list
-        this.airport.getExitLanes().add(this);
+        // Add runway out to airport's runways list
+        this.airport.getRunways().add(this);
     }
 
     public void acceptPlane(Airplane airplane) {
-        // Make exit lane unavailable
+        // Make runway unavailable
         setAvailable(false);
         setCurrentAirplane(airplane);
-        airplane.setExitLane(this);
-        // Make terminal available
-        airplane.getTerminal().setAvailable(true);
-        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned exit lane " + this.id);
+        airplane.setRunway(this);
+        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned runway " + this.id);
+    }
+
+    public static int getTotNumber() {
+        return totNumber;
+    }
+
+    public static void setTotNumber(int totNumber) {
+        Runway.totNumber = totNumber;
     }
 
     public Airport getAirport() {
@@ -52,14 +58,6 @@ public class ExitLane {
 
     public void setCurrentAirplane(Airplane currentAirplane) {
         this.currentAirplane = currentAirplane;
-    }
-
-    public static int getTotNumber() {
-        return totNumber;
-    }
-
-    public static void setTotNumber(int totNumber) {
-        ExitLane.totNumber = totNumber;
     }
 
     public int getId() {

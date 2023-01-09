@@ -2,29 +2,30 @@ package airport;
 
 import enstabretagne.base.logger.Logger;
 
-public class EntryLane {
+public class TaxiwayIn {
     private static int totNumber = 0;
     private Airport airport;
     private boolean isAvailable;
     private Airplane currentAirplane;
     private int id;
 
-    public EntryLane(Airport airport) {
+    public TaxiwayIn(Airport airport) {
         this.airport = airport;
-        // Entry lane is free by default
+        // Taxiway in is free by default
         this.isAvailable = true;
         // Increase total number and assign id to terminal
         this.id = totNumber + 1;
         totNumber = id;
-        // Add entry lane to airport's entry lanes list
-        this.airport.getEntryLanes().add(this);
+        // Add taxi way in to airport's taxiways in list
+        this.airport.getTaxiwaysIn().add(this);
     }
 
     public void acceptPlane(Airplane airplane) {
+        // Make taxiway in unavailable
         setAvailable(false);
         setCurrentAirplane(airplane);
-        airplane.setEntryLane(this);
-        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned entry lane " + this.id);
+        airplane.setTaxiwayIn(this);
+        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned taxiway in " + this.id);
     }
 
     public Airport getAirport() {
@@ -56,7 +57,7 @@ public class EntryLane {
     }
 
     public static void setTotNumber(int totNumber) {
-        EntryLane.totNumber = totNumber;
+        TaxiwayIn.totNumber = totNumber;
     }
 
     public int getId() {

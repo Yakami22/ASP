@@ -7,18 +7,13 @@ import java.util.ArrayList;
 
 public class Airport {
     private String name;
-    private boolean landingLaneAvailable;
-    private boolean takeOffLaneAvailable;
-    private ArrayList<EntryLane> entryLanes = new ArrayList<EntryLane>();
-    private ArrayList<ExitLane> exitLanes = new ArrayList<ExitLane>();
+    private ArrayList<Runway> runways = new ArrayList<Runway>();
+    private ArrayList<TaxiwayIn> taxiwaysIn = new ArrayList<TaxiwayIn>();
+    private ArrayList<TaxiwayOut> taxiwayOuts = new ArrayList<TaxiwayOut>();
     private ArrayList<Terminal> terminals = new ArrayList<Terminal>();
     private ControlTower tower;
 
-    public Airport(String name, int terminalNumber, int entryLaneNumber, int exitLaneNumber) {
-        // All lanes are available at the beginning
-        this.setLandingLaneAvailable(true);
-        this.setTakeOffLaneAvailable(true);
-
+    public Airport(String name, int runwayNumber, int terminalNumber, int taxiwayInNumber, int taxiwayOutNumber) {
         // Set Airport name
         this.setName(name);
         Logger.Information(this, "Airport", this.name + " is now opened !");
@@ -26,19 +21,24 @@ public class Airport {
         // Set Control Tower
         this.tower = new ControlTower(this, 1);
 
+        // Create given number of runways
+        for (int i=0; i<runwayNumber; i++) {
+            Runway runway = new Runway(this);
+        }
+
         // Create given number of terminals
         for (int i=0; i<terminalNumber; i++) {
             Terminal terminal = new Terminal(this);
         }
 
-        // Create given number of entry lanes
-        for (int i=0; i<entryLaneNumber; i++) {
-            EntryLane entryLane = new EntryLane(this);
+        // Create given number of taxiways in
+        for (int i=0; i<taxiwayInNumber; i++) {
+            TaxiwayIn taxiwayIn = new TaxiwayIn(this);
         }
 
-        // Create given number of exit lanes
-        for (int i=0; i<exitLaneNumber; i++) {
-            ExitLane exitLane = new ExitLane(this);
+        // Create given number of taxiways out
+        for (int i=0; i<taxiwayOutNumber; i++) {
+            TaxiwayOut taxiwayOut = new TaxiwayOut(this);
         }
     }
 
@@ -54,25 +54,37 @@ public class Airport {
         return null;
     }
 
-    public EntryLane findEntryLane(Airplane airplane) {
-        // Fins an available entry lane and returns it
-        // Returns null if all entry lanes are taken
-        for (EntryLane entryLane : this.getEntryLanes()) {
-            if (entryLane.isAvailable()) {
-                Logger.Information(this, "findEntryLane", "Entry lane " + entryLane.getId() + " is available for plane " + airplane.getId());
-                return entryLane;
+    public TaxiwayIn findTaxiwayIn(Airplane airplane) {
+        // Finds an available taxiway in and returns it
+        // Returns null if all taxiway in are taken
+        for (TaxiwayIn taxiwayIn : this.getTaxiwaysIn()) {
+            if (taxiwayIn.isAvailable()) {
+                Logger.Information(this, "findTaxiwayIn", "Taxiway in " + taxiwayIn.getId() + " is available for plane " + airplane.getId());
+                return taxiwayIn;
             }
         }
         return null;
     }
 
-    public ExitLane findExitLane(Airplane airplane) {
-        // Fins an available exit lane and returns it
-        // Returns null if all exit lanes are taken
-        for (ExitLane exitLane : this.getExitLanes()) {
-            if (exitLane.isAvailable()) {
-                Logger.Information(this, "findExitLane", "Exit lane " + exitLane.getId() + " is available for plane " + airplane.getId());
-                return exitLane;
+    public TaxiwayOut findTaxiwayOut(Airplane airplane) {
+        // Finds an available taxiway out and returns it
+        // Returns null if all taxiways out are taken
+        for (TaxiwayOut taxiwayOut : this.getTaxiwaysOut()) {
+            if (taxiwayOut.isAvailable()) {
+                Logger.Information(this, "findTaxiWayOut", "Taxiway out " + taxiwayOut.getId() + " is available for plane " + airplane.getId());
+                return taxiwayOut;
+            }
+        }
+        return null;
+    }
+
+    public Runway findRunway(Airplane airplane) {
+        // Finds an available runway and returns it
+        // Returns null if all runways are taken
+        for (Runway runway : this.getRunways()) {
+            if (runway.isAvailable()) {
+                Logger.Information(this, "findRunway", "Runway " + runway.getId() + " is available for plane " + airplane.getId());
+                return runway;
             }
         }
         return null;
@@ -86,36 +98,36 @@ public class Airport {
         this.name = name;
     }
 
-    public boolean isLandingLaneAvailable() {
-        return landingLaneAvailable;
+    public ArrayList<Runway> getRunways() {
+        return runways;
     }
 
-    public void setLandingLaneAvailable(boolean landingLaneAvailable) {
-        this.landingLaneAvailable = landingLaneAvailable;
+    public void setRunways(ArrayList<Runway> runways) {
+        this.runways = runways;
     }
 
-    public boolean isTakeOffLaneAvailable() {
-        return takeOffLaneAvailable;
+    public ArrayList<TaxiwayOut> getTaxiwayOuts() {
+        return taxiwayOuts;
     }
 
-    public void setTakeOffLaneAvailable(boolean takeOffLaneAvailable) {
-        this.takeOffLaneAvailable = takeOffLaneAvailable;
+    public void setTaxiwayOuts(ArrayList<TaxiwayOut> taxiwayOuts) {
+        this.taxiwayOuts = taxiwayOuts;
     }
 
-    public ArrayList<EntryLane> getEntryLanes() {
-        return entryLanes;
+    public ArrayList<TaxiwayIn> getTaxiwaysIn() {
+        return taxiwaysIn;
     }
 
-    public void setEntryLanes(ArrayList<EntryLane> entryLanes) {
-        this.entryLanes = entryLanes;
+    public void setTaxiwaysIn(ArrayList<TaxiwayIn> taxiwaysIn) {
+        this.taxiwaysIn = taxiwaysIn;
     }
 
-    public ArrayList<ExitLane> getExitLanes() {
-        return exitLanes;
+    public ArrayList<TaxiwayOut> getTaxiwaysOut() {
+        return taxiwayOuts;
     }
 
-    public void setExitLanes(ArrayList<ExitLane> exitLanes) {
-        this.exitLanes = exitLanes;
+    public void setTaxiwaysOut(ArrayList<TaxiwayOut> taxiwayOuts) {
+        this.taxiwayOuts = taxiwayOuts;
     }
 
     public ControlTower getTower() {

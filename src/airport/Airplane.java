@@ -2,7 +2,6 @@ package airport;
 
 import engine.SimEntity;
 import engine.SimuEngine;
-import enstabretagne.base.logger.Logger;
 import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.base.time.LogicalDuration;
 
@@ -11,8 +10,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Airplane extends SimEntity {
     private int id = 0;
     private Airport airport;
-    private EntryLane entryLane;
-    private ExitLane exitLane;
+
+    private Runway runway;
+    private TaxiwayIn taxiwayIn;
+    private TaxiwayOut taxiwayOut;
     private Terminal terminal;
 
     public Airplane(SimuEngine eng, Airport airport) {
@@ -49,20 +50,28 @@ public class Airplane extends SimEntity {
         this.airport = airport;
     }
 
-    public EntryLane getEntryLane() {
-        return entryLane;
+    public TaxiwayIn getTaxiwayIn() {
+        return taxiwayIn;
     }
 
-    public void setEntryLane(EntryLane entryLane) {
-        this.entryLane = entryLane;
+    public void setTaxiwayIn(TaxiwayIn taxiwayIn) {
+        this.taxiwayIn = taxiwayIn;
     }
 
-    public ExitLane getExitLane() {
-        return exitLane;
+    public TaxiwayOut getTaxiwayOut() {
+        return taxiwayOut;
     }
 
-    public void setExitLane(ExitLane exitLane) {
-        this.exitLane = exitLane;
+    public Runway getRunway() {
+        return runway;
+    }
+
+    public void setRunway(Runway runway) {
+        this.runway = runway;
+    }
+
+    public void setTaxiwayOut(TaxiwayOut taxiwayOut) {
+        this.taxiwayOut = taxiwayOut;
     }
 
     public Terminal getTerminal() {

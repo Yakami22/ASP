@@ -14,7 +14,7 @@ public class Main {
         SimuEngine engine = new SimuEngine(currentTime, end);
 
         // Airport creation
-        Airport airport = new Airport("Goetghebeur International Airport", 1, 1, 1);
+        Airport airport = new Airport("Goetghebeur International Airport", 2, 6, 1, 1);
 
         // Airplanes creation
         Airplane plane1 = new Airplane(engine, airport);

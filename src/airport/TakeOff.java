@@ -14,8 +14,9 @@ public class TakeOff extends SimEvent {
     @Override
     public void process() {
         Airplane plane = (Airplane) this.getEntity();
-        // Check if take off lane is available
-        if (plane.getAirport().isTakeOffLaneAvailable()) {
+        // Check if a runway is available
+        Runway runway = plane.getAirport().findRunway(plane);
+        if (runway != null) {
             plane.getAirport().getTower().authorizeTakeOff(plane);
             plane.takeOff();
         }
