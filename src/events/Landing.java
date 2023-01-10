@@ -1,5 +1,6 @@
-package airport;
+package events;
 
+import airport.Airplane;
 import engine.SimEntity;
 import engine.SimEvent;
 import enstabretagne.base.time.LogicalDateTime;
@@ -15,8 +16,8 @@ public class Landing extends SimEvent {
         Airplane plane = (Airplane) this.getEntity();
         plane.land();
 
-        // Create event ride to terminal
-        RideToTerminal ride = new RideToTerminal(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(2)));
+        // Create event ride to gate
+        RideToGate ride = new RideToGate(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(2)));
         // Add event to the queue
         plane.getEngine().postEvent(ride);
     }

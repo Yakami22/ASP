@@ -13,7 +13,7 @@ public class TaxiwayIn {
         this.airport = airport;
         // Taxiway in is free by default
         this.isAvailable = true;
-        // Increase total number and assign id to terminal
+        // Increase total number and assign id to gate
         this.id = totNumber + 1;
         totNumber = id;
         // Add taxi way in to airport's taxiways in list

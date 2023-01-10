@@ -39,7 +39,7 @@ public class ControlTower {
     }
 
     public void denyExit(Airplane plane) {
-        Logger.Information(this, "denyExit", "Plane " + plane.getId() + " was denied leaving terminal " + plane.getTerminal().getId());
+        Logger.Information(this, "denyExit", "Plane " + plane.getId() + " was denied leaving gate " + plane.getGate().getId());
     }
 
     public void authorizeTakeOff(Airplane plane) {

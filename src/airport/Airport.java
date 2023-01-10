@@ -2,7 +2,6 @@ package airport;
 
 import enstabretagne.base.logger.Logger;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Airport {
@@ -10,10 +9,10 @@ public class Airport {
     private ArrayList<Runway> runways = new ArrayList<Runway>();
     private ArrayList<TaxiwayIn> taxiwaysIn = new ArrayList<TaxiwayIn>();
     private ArrayList<TaxiwayOut> taxiwayOuts = new ArrayList<TaxiwayOut>();
-    private ArrayList<Terminal> terminals = new ArrayList<Terminal>();
+    private ArrayList<Gate> gates = new ArrayList<Gate>();
     private ControlTower tower;
 
-    public Airport(String name, int runwayNumber, int terminalNumber, int taxiwayInNumber, int taxiwayOutNumber) {
+    public Airport(String name, int runwayNumber, int gateNumber, int taxiwayInNumber, int taxiwayOutNumber) {
         // Set Airport name
         this.setName(name);
         Logger.Information(this, "Airport", this.name + " is now opened !");
@@ -26,9 +25,9 @@ public class Airport {
             Runway runway = new Runway(this);
         }
 
-        // Create given number of terminals
-        for (int i=0; i<terminalNumber; i++) {
-            Terminal terminal = new Terminal(this);
+        // Create given number of gates
+        for (int i=0; i<gateNumber; i++) {
+            Gate gate = new Gate(this);
         }
 
         // Create given number of taxiways in
@@ -42,13 +41,13 @@ public class Airport {
         }
     }
 
-    public Terminal findTerminal(Airplane airplane) {
-        // Finds an available terminal and returns it
-        // Returns null if all terminals are taken
-        for (Terminal terminal : this.getTerminals()) {
-            if (terminal.isAvailable()) {
-                Logger.Information(this, "findTerminal", "Terminal " + terminal.getId() + " is available for plane " + airplane.getId());
-                return terminal;
+    public Gate findGate(Airplane airplane) {
+        // Finds an available gate and returns it
+        // Returns null if all gates are taken
+        for (Gate gate : this.getGates()) {
+            if (gate.isAvailable()) {
+                Logger.Information(this, "findGate", "Gate " + gate.getId() + " is available for plane " + airplane.getId());
+                return gate;
             }
         }
         return null;
@@ -138,11 +137,11 @@ public class Airport {
         this.tower = tower;
     }
 
-    public ArrayList<Terminal> getTerminals() {
-        return terminals;
+    public ArrayList<Gate> getGates() {
+        return gates;
     }
 
-    public void setTerminals(ArrayList<Terminal> terminals) {
-        this.terminals = terminals;
+    public void setGates(ArrayList<Gate> gates) {
+        this.gates = gates;
     }
 }

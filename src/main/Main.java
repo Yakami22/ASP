@@ -1,5 +1,7 @@
-package airport;
+package main;
 
+import airport.Airplane;
+import airport.Airport;
 import engine.SimuEngine;
 import enstabretagne.base.logger.Logger;
 import enstabretagne.base.time.LogicalDateTime;

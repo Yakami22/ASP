@@ -1,5 +1,8 @@
-package airport;
+package events;
 
+import airport.Airplane;
+import airport.Runway;
+import airport.TaxiwayIn;
 import engine.SimEntity;
 import engine.SimEvent;
 import enstabretagne.base.time.LogicalDateTime;
@@ -16,7 +19,7 @@ public class NotifyArrival extends SimEvent {
         // Get an id from control tower
         plane.getAirport().getTower().identifyAirplane(plane, "notify its arrival");
         // Check if a runway & taxiway in are available
-        // If it is land & create ride to terminal event
+        // If it is land & create ride to gate event
         TaxiwayIn taxiwayIn = plane.getAirport().findTaxiwayIn(plane);
         Runway runway = plane.getAirport().findRunway(plane);
         if (runway!=null && taxiwayIn!=null) {

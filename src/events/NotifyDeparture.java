@@ -1,5 +1,7 @@
-package airport;
+package events;
 
+import airport.Airplane;
+import airport.TaxiwayOut;
 import engine.SimEntity;
 import engine.SimEvent;
 import enstabretagne.base.time.LogicalDateTime;

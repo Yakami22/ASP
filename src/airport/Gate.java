@@ -2,30 +2,30 @@ package airport;
 
 import enstabretagne.base.logger.Logger;
 
-public class Terminal {
+public class Gate {
     private static int totNumber = 0;
     private Airport airport;
     private boolean isAvailable;
     private Airplane currentAirplane;
     private int id;
 
-    public Terminal(Airport airport) {
+    public Gate(Airport airport) {
         this.airport = airport;
-        // Terminal is free by default
+        // Gate is free by default
         this.isAvailable = true;
-        // Increase total number and assign id to terminal
+        // Increase total number and assign id to gate
         this.id = totNumber + 1;
         totNumber = id;
-        // Add terminal to airport's terminal list
-        this.airport.getTerminals().add(this);
+        // Add gate to airport's gate list
+        this.airport.getGates().add(this);
     }
 
     public void acceptPlane(Airplane airplane) {
-        // Make terminal unavailable
+        // Make gate unavailable
         setAvailable(false);
         setCurrentAirplane(airplane);
-        airplane.setTerminal(this);
-        Logger.Information(this, "acceptPlane", "Terminal " + this.id + " accepted plane " + airplane.getId());
+        airplane.setGate(this);
+        Logger.Information(this, "acceptPlane", "Gate " + this.id + " accepted plane " + airplane.getId());
     }
 
     public Airport getAirport() {

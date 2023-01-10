@@ -5,6 +5,7 @@ import engine.SimuEngine;
 import enstabretagne.base.logger.Logger;
 import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.base.time.LogicalDuration;
+import events.NotifyArrival;
 
 
 public class Airplane extends SimEntity {
@@ -14,7 +15,7 @@ public class Airplane extends SimEntity {
     private Runway runway;
     private TaxiwayIn taxiwayIn;
     private TaxiwayOut taxiwayOut;
-    private Terminal terminal;
+    private Gate gate;
 
     public Airplane(SimuEngine eng, Airport airport) {
         super(eng);
@@ -49,9 +50,9 @@ public class Airplane extends SimEntity {
         Logger.Information(this, "rideToTrack", "Plane " + this.getId() + " is riding on taxiway out " + this.getTaxiwayOut().getId());
     }
 
-    public void rideToTerminal() {
+    public void rideToGate() {
         this.getRunway().setAvailable(true);
-        Logger.Information(this, "rideToTrack", "Plane " + this.getId() + " is riding on taxiway in " + this.getTaxiwayIn().getId());
+        Logger.Information(this, "rideToGate", "Plane " + this.getId() + " is riding on taxiway in " + this.getTaxiwayIn().getId());
     }
 
     public void unloadPassengers() {
@@ -107,11 +108,11 @@ public class Airplane extends SimEntity {
         this.taxiwayOut = taxiwayOut;
     }
 
-    public Terminal getTerminal() {
-        return terminal;
+    public Gate getGate() {
+        return gate;
     }
 
-    public void setTerminal(Terminal terminal) {
-        this.terminal = terminal;
+    public void setGate(Gate gate) {
+        this.gate = gate;
     }
 }

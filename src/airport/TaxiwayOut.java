@@ -13,7 +13,7 @@ public class TaxiwayOut {
         this.airport = airport;
         // Exit is free by default
         this.isAvailable = true;
-        // Increase total number and assign id to terminal
+        // Increase total number and assign id to gate
         this.id = totNumber + 1;
         totNumber = id;
         // Add taxiway out to airport's taxiways out list
@@ -25,8 +25,8 @@ public class TaxiwayOut {
         setAvailable(false);
         setCurrentAirplane(airplane);
         airplane.setTaxiwayOut(this);
-        // Make terminal available
-        airplane.getTerminal().setAvailable(true);
+        // Make gate available
+        airplane.getGate().setAvailable(true);
         Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned taxiway out " + this.id);
     }
 

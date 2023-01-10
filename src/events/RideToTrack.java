@@ -1,9 +1,9 @@
-package airport;
+package events;
 
+import airport.Airplane;
 import engine.SimEntity;
 import engine.SimEvent;
 import enstabretagne.base.time.LogicalDateTime;
-import enstabretagne.base.time.LogicalDuration;
 
 public class RideToTrack extends SimEvent {
     public RideToTrack(SimEntity entity, LogicalDateTime dateOccurence) {
