@@ -20,25 +20,54 @@ public class Airplane extends GenericSimEntity {
 	@Override
 	protected void init() {
 		super.init();
-		postBehaviour(getEngine().SimulationDate(), this::landing);
-		postBehaviour(getEngine().SimulationDate(), this::takeOff);
+		postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes((long) (2 + Math.random()*10))), this::landingStart);  // Ajouter random time
+		//postBehaviour(getEngine().SimulationDate(), this::takeOff);
 	}
 	
-	public void landing() {
+	public void landingStart() {
+		// Logger.Information(this, getName(), "wants to land");
+		List<EntiteSimulee> myAeroports = recherche(e -> ((e instanceof Aeroport)));
+		if(myAeroports.size()>0) {
+			Aeroport a = (Aeroport) myAeroports.get(0) ;
+			if (a.pisteLibre && a.twLanding) {
+				a.pisteLibre = false;
+				a.twLanding = false;
+				Logger.Information(this, "landing start", getName() + " va atterrir a l'aeroport " + myAeroports.get(0).getName());
+				//getEngine().SimulationDate().add(LogicalDuration.ofMinutes(2));
+			//	a.pisteLibre = true;	
+				postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(2)), this::landingEnd);
+			} else {
+				a.waitingPlanes.add(this);
+				Logger.Information(this, "wait landing", getName() + " is waiting to land ");
+				//System.out.println("Test landing " + a.waitingPlanes.toString());
+			}
+		}
+	}
+	
+	public void landingEnd() {
 		//Logger.Information(this, getName(), "landing");
 		List<EntiteSimulee> myAeroports = recherche(e -> ((e instanceof Aeroport)));
 		if(myAeroports.size()>0) {
 			Aeroport a = (Aeroport) myAeroports.get(0) ;
-			if (a.pisteLibre && a.porteLibre > 0) {
-				a.pisteLibre = false;
+			a.pisteLibre = true;
+			if(a.porteLibre > 0 && a.porteLibre <= 6) {
+				a.twLanding = true;
 				a.porteLibre -= 1;
-				Logger.Information(this, "landing", getName() + " a trouvé l'aeroport " + myAeroports.get(0).getName());
-				getEngine().SimulationDate().add(LogicalDuration.ofMinutes(2));
-				a.pisteLibre = true;	
-			} else {
-				a.waitingPlanes.add(this);
-				System.out.println("Test landing " + a.waitingPlanes.toString());
+				Logger.Information(this, "landing end", getName() + " a fini d'atterrir, il reste " + a.porteLibre + " places");
+			} // Ajouter else condition
+			
+			//postBehaviour(getEngine().SimulationDate(), this::takeOffStart);
+			if(!a.waitingPlanes.isEmpty() && a.porteLibre > 0 && a.twLanding) {
+				postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(5)), ((Airplane) a.waitingPlanes.get(0))::landingStart);
+				a.waitingPlanes.remove(0);
 			}
+			if(!a.waitingPlanesTakeOff.isEmpty() && a.porteLibre < 6 && a.twTakeoff) {
+				postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(5)), ((Airplane) a.waitingPlanesTakeOff.get(0))::takeOffStart);
+				a.waitingPlanesTakeOff.remove(0);
+			}
+				//getEngine().SimulationDate().add(LogicalDuration.ofMinutes(2));
+			//	a.pisteLibre = true;	
+			postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(5)), this::takeOffStart);
 		}
 	}
 	
@@ -51,23 +80,49 @@ public class Airplane extends GenericSimEntity {
 //		
 //	}
 	
-	public void takeOff() {
+	public void takeOffStart() {
 		//Logger.Information(this, getName(), "takeOff");
 		List<EntiteSimulee> myAeroports = recherche(e -> ((e instanceof Aeroport)));
 		if(myAeroports.size()>0) {
 			Aeroport a = (Aeroport) myAeroports.get(0) ;
-			if (a.pisteLibre) {
+			if (a.pisteLibre && a.twTakeoff && a.porteLibre < 6) {
 				a.pisteLibre = false;
+				a.twTakeoff = false;
 				a.porteLibre += 1;
-				Logger.Information(this, "takeOff", getName() + " a décollé de l'aeroport " + myAeroports.get(0).getName());	
-				getEngine().SimulationDate().add(LogicalDuration.ofMinutes(3));
-				a.pisteLibre = true;	
+				Logger.Information(this, "takeOff start", getName() + " est en train de décoller de l'aeroport " + myAeroports.get(0).getName());	
+				//getEngine().SimulationDate().add(LogicalDuration.ofMinutes(3));
+				//a.pisteLibre = true;	
+				postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(3)), this::takeOffEnd);
 			} else {
-				a.waitingPlanes.add(this);
-				System.out.println("Test takeoff " + a.waitingPlanes.toString());
+				a.waitingPlanesTakeOff.add(this);
+				Logger.Information(this, "wait takeOff", getName() + " is waiting to takeOff ");
+				//System.out.println("Test takeoff " + a.waitingPlanes.toString());
 			}
 		}
 	}	
 	
+	public void takeOffEnd() {
+		//Logger.Information(this, getName(), "takeOff");
+		List<EntiteSimulee> myAeroports = recherche(e -> ((e instanceof Aeroport)));
+		if(myAeroports.size()>0) {
+			Aeroport a = (Aeroport) myAeroports.get(0) ;
+			a.pisteLibre = true;
+			a.twTakeoff = true;
+			Logger.Information(this, "takeOff end", getName() + " a décollé de l'aeroport, il reste " + a.porteLibre + " places");	
+			//getEngine().SimulationDate().add(LogicalDuration.ofMinutes(3));
+			
+			if(!a.waitingPlanesTakeOff.isEmpty() && a.porteLibre < 6) {
+				postBehaviour(getEngine().SimulationDate(), ((Airplane) a.waitingPlanesTakeOff.get(0))::takeOffStart);
+				a.waitingPlanesTakeOff.remove(0);
+			}
+			if(!a.waitingPlanes.isEmpty() && a.porteLibre > 0) {
+				postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(5)), ((Airplane) a.waitingPlanes.get(0))::landingStart);
+				a.waitingPlanes.remove(0);
+			}
+			
+			//System.out.println("Test takeoff " + a.waitingPlanes.toString());
+			
+		}
+	}	
 
 }

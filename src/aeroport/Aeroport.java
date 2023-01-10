@@ -9,8 +9,11 @@ import enstabretagne.engine.SimuEngine;
 public class Aeroport extends EntiteSimulee{
 
 	boolean pisteLibre = true;
+	boolean twLanding = true;
+	boolean twTakeoff = true;
 	int porteLibre = 6;
 	List<EntiteSimulee> waitingPlanes = recherche(e -> ((e instanceof Airplane)));
+	List<EntiteSimulee> waitingPlanesTakeOff = recherche(e -> ((e instanceof Airplane)));
 	
 	public Aeroport(SimuEngine engine, InitData ini) {
 		super(engine, ini);
