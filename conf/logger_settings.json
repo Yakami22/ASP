@@ -27,7 +27,6 @@
         "enstabretagne.travaux_diriges.td_corrige.cantine.simEntity.cantine.occupation.CellOccupation"
       ],
       "levelsToRecord": [
-        "Information",
         "Warning",
         "Error",
         "Fatal",
