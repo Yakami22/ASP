@@ -45,6 +45,15 @@ public class Airplane extends SimEntity {
         this.getAirport().getTower().notifyTakeOff(this);
     }
 
+    public void rideToTrack() {
+        Logger.Information(this, "rideToTrack", "Plane " + this.getId() + " is riding on taxiway out " + this.getTaxiwayOut().getId());
+    }
+
+    public void rideToTerminal() {
+        this.getRunway().setAvailable(true);
+        Logger.Information(this, "rideToTrack", "Plane " + this.getId() + " is riding on taxiway in " + this.getTaxiwayIn().getId());
+    }
+
     public void unloadPassengers() {
         Logger.Information(this, "unloadPassengers", "Plane " + this.getId() + " is unloading its passengers");
     }

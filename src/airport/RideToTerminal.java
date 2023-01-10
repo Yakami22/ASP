@@ -14,6 +14,7 @@ public class RideToTerminal extends SimEvent {
     @Override
     public void process() {
         Airplane plane = (Airplane) this.getEntity();
+        plane.rideToTerminal();
         // Find an available terminal
         Terminal terminal = plane.getAirport().findTerminal(plane);
         // If no terminal available wait

@@ -13,6 +13,7 @@ public class RideToTrack extends SimEvent {
     @Override
     public void process() {
         Airplane plane = (Airplane) this.getEntity();
+        plane.rideToTrack();
 
         // Create take off event
         TakeOff takeOff = new TakeOff(plane, this.getEntity().getEngine().getCurrentDate());
