@@ -51,7 +51,6 @@ public class ControlTower {
 
     public void notifyLanding(Airplane plane) {
         // Make runway & taxi way in available
-        //plane.getRunway().setAvailable(true);
         plane.getTaxiwayIn().setAvailable(true);
         Logger.Information(this, "notifyLanding", "Plane " + plane.getId() + "'s flight is over");
         Logger.Information(this, "acceptPlane", "Runway " + plane.getRunway().getId() + " & taxiway in " + plane.getTaxiwayIn().getId() + " are now available");
