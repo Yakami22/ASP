@@ -25,15 +25,19 @@ public class MyScenario extends Scenario{
 	public void creerEntitesSimulees() {
 		//creer aeroprot
 		Aeroport aeroport = new Aeroport(this.getEngine(), this.getInit());
+		//long duration = (long) this.getEngine().getRandomGenerator().nextUniform(10, 30);
+		LogicalDateTime time = this.getEngine().SimulationDate();
 		for(int i=0;i<10;i++) {
-			createRandomAirplane(this);
+			//long duration = (long) this.getEngine().getRandomGenerator().nextUniform(10, 30);
+			//time = time.add(LogicalDuration.ofMinutes(duration));
+			createRandomAirplane(this, i);
 			totalEntities++;
 
 		}
 	}
 	
-	protected static Airplane createRandomAirplane(Scenario s) {
-		return new Airplane(s.getEngine(), new InitAirplane("Plane", "F"));
+	protected static Airplane createRandomAirplane(Scenario s, int i) {
+		return new Airplane(s.getEngine(), new InitAirplane("F" +i++, "F"));
 	}
 	
 	public void init() {
@@ -59,7 +63,7 @@ public class MyScenario extends Scenario{
 		//c'est au sc�nario de faire le requestInit()
 		@Override
 		public void process() {
-			Airplane es = createRandomAirplane(MyScenario.this);
+			Airplane es = createRandomAirplane(MyScenario.this, 0);
 			es.requestInit();
 		}
 		

@@ -11,16 +11,21 @@ import engine.GenericSimEntity;
 public class Airplane extends GenericSimEntity {
 
 	private int id ;
+	private LogicalDateTime time;
 	
 	
 	public Airplane(SimuEngine engine, InitAirplane ini) {
 		super(engine, ini);
+		//this.time = time;
 	}
 
 	@Override
 	protected void init() {
 		super.init();
-		postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes((long) (2 + Math.random()*10))), this::landingStart);  // Ajouter random time
+		long duration = (long) getEngine().getRandomGenerator().nextUniform(10, 30);
+		postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(duration)), this::landingStart);  // Ajouter random time
+		//System.out.println("TEEEEEST " + this.getEngine().SimulationDate());
+		//postBehaviour(this.time, this::landingStart);
 		//postBehaviour(getEngine().SimulationDate(), this::takeOff);
 	}
 	
@@ -58,7 +63,7 @@ public class Airplane extends GenericSimEntity {
 			
 			//postBehaviour(getEngine().SimulationDate(), this::takeOffStart);
 			if(!a.waitingPlanes.isEmpty() && a.porteLibre > 0 && a.twLanding) {
-				postBehaviour(getEngine().SimulationDate().add(LogicalDuration.ofMinutes(5)), ((Airplane) a.waitingPlanes.get(0))::landingStart);
+				postBehaviour(getEngine().SimulationDate(), ((Airplane) a.waitingPlanes.get(0))::landingStart);
 				a.waitingPlanes.remove(0);
 			}
 			if(!a.waitingPlanesTakeOff.isEmpty() && a.porteLibre < 6 && a.twTakeoff) {
