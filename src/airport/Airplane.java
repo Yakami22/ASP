@@ -21,9 +21,10 @@ public class Airplane extends SimEntity {
         super(eng);
         this.airport =  airport;
         // Random number added to the default time
-        long random = (long) this.getEngine().getRandom().nextUniform(0, 20);
-        LogicalDateTime date = this.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(random));
-        NotifyArrival notifyArrival = new NotifyArrival(this, date);
+       // long random = (long) this.getEngine().getRandom().nextUniform(0, 20);
+       // LogicalDateTime date = this.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(random));
+        NotifyArrival notifyArrival = new NotifyArrival(this, this.getEngine().getCurrentDate());
+        System.out.println("TEEEEEEST " + eng.getCurrentDate());
         eng.postEvent(notifyArrival);
     }
 
