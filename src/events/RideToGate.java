@@ -21,14 +21,14 @@ public class RideToGate extends SimEvent {
         Gate gate = plane.getAirport().findGate(plane);
         // If no gate available wait
         if (gate == null) {
-            Logger.Information(this, "process", "All gates are currently unavailable and cannot accept plane " + plane.getId());
+            Logger.Information(this, "process", "All gates are currently unavailable and cannot accept plane " + plane.getId() + "; Time = " + plane.getEngine().getCurrentDate());
             // Reschedule
             this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
         }
         // Else, accept plane and create unload passengers event
         else {
             gate.acceptPlane(plane);
-            plane.flightOver();
+            //plane.flightOver();
             long random = (long) plane.getEngine().getRandom().nextUniform(2, 6);
             UnloadPassengers unload = new UnloadPassengers(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(random)));
             // Add event to the queue

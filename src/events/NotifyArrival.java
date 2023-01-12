@@ -25,14 +25,13 @@ public class NotifyArrival extends SimEvent {
         if (runway!=null && taxiwayIn!=null) {
             plane.getAirport().getTower().authorizeLanding(plane, taxiwayIn, runway);
             // Create approach event
-            long duration = (long) plane.getEngine().getRandom().nextUniform(2, 5);
-            Approach approach = new Approach(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(duration)));
+            Approach approach = new Approach(plane, this.getEntity().getEngine().getCurrentDate());
             // Add event to the queue
             plane.getEngine().postEvent(approach);
         }
         // If not, reschedule landing event
         else {
             plane.getAirport().getTower().denyLanding(plane);
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
+            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(1)));
         }
 }}

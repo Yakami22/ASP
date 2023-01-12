@@ -14,10 +14,11 @@ public class UnloadPassengers extends SimEvent {
     @Override
     public void process() {
         Airplane plane = (Airplane) this.getEntity();
+        plane.flightOver();
         plane.unloadPassengers();
 
         // Create preparation event
-        Preparation prep = new Preparation(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(30)));
+        Preparation prep = new Preparation(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(10)));
         // Add event to the queue
         plane.getEngine().postEvent(prep);
     }

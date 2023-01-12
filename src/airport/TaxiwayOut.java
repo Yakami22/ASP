@@ -27,7 +27,7 @@ public class TaxiwayOut {
         airplane.setTaxiwayOut(this);
         // Make gate available
         airplane.getGate().setAvailable(true);
-        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned taxiway out " + this.id);
+        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned taxiway out " + this.id + "; Time = " + airplane.getEngine().getCurrentDate());
     }
 
     public Airport getAirport() {

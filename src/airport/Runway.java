@@ -25,7 +25,7 @@ public class Runway {
         setAvailable(false);
         setCurrentAirplane(airplane);
         airplane.setRunway(this);
-        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned runway " + this.id);
+        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned runway " + this.id + "; Time = " + airplane.getEngine().getCurrentDate());
     }
 
     public static int getTotNumber() {

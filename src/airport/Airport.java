@@ -46,7 +46,7 @@ public class Airport {
         // Returns null if all gates are taken
         for (Gate gate : this.getGates()) {
             if (gate.isAvailable()) {
-                Logger.Information(this, "findGate", "Gate " + gate.getId() + " is available for plane " + airplane.getId());
+                Logger.Information(this, "findGate", "Gate " + gate.getId() + " is available for plane " + airplane.getId() + "; Time = " + airplane.getEngine().getCurrentDate());
                 return gate;
             }
         }
@@ -58,7 +58,7 @@ public class Airport {
         // Returns null if all taxiway in are taken
         for (TaxiwayIn taxiwayIn : this.getTaxiwaysIn()) {
             if (taxiwayIn.isAvailable()) {
-                Logger.Information(this, "findTaxiwayIn", "Taxiway in " + taxiwayIn.getId() + " is available for plane " + airplane.getId());
+                Logger.Information(this, "findTaxiwayIn", "Taxiway in " + taxiwayIn.getId() + " is available for plane " + airplane.getId() + "; Time = " + airplane.getEngine().getCurrentDate());
                 return taxiwayIn;
             }
         }
@@ -70,7 +70,7 @@ public class Airport {
         // Returns null if all taxiways out are taken
         for (TaxiwayOut taxiwayOut : this.getTaxiwaysOut()) {
             if (taxiwayOut.isAvailable()) {
-                Logger.Information(this, "findTaxiWayOut", "Taxiway out " + taxiwayOut.getId() + " is available for plane " + airplane.getId());
+                Logger.Information(this, "findTaxiWayOut", "Taxiway out " + taxiwayOut.getId() + " is available for plane " + airplane.getId() + "; Time = " + airplane.getEngine().getCurrentDate());
                 return taxiwayOut;
             }
         }
@@ -82,7 +82,7 @@ public class Airport {
         // Returns null if all runways are taken
         for (Runway runway : this.getRunways()) {
             if (runway.isAvailable()) {
-                Logger.Information(this, "findRunway", "Runway " + runway.getId() + " is available for plane " + airplane.getId());
+                Logger.Information(this, "findRunway", "Runway " + runway.getId() + " is available for plane " + airplane.getId() + "; Time = " + airplane.getEngine().getCurrentDate());
                 return runway;
             }
         }

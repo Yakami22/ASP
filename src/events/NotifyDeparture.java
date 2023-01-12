@@ -32,7 +32,7 @@ public class NotifyDeparture extends SimEvent {
         // If not, reschedule event
         else {
             plane.getAirport().getTower().denyExit(plane);
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
+            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(1)));
         }
     }
 }

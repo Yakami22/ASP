@@ -23,20 +23,23 @@ public class Airplane extends SimEntity {
         // Random number added to the default time
        // long random = (long) this.getEngine().getRandom().nextUniform(0, 20);
        // LogicalDateTime date = this.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(random));
-        NotifyArrival notifyArrival = new NotifyArrival(this, this.getEngine().getCurrentDate());
-        System.out.println("TEEEEEEST " + eng.getCurrentDate());
-        eng.postEvent(notifyArrival);
+        //NotifyArrival notifyArrival = new NotifyArrival(this, this.getEngine().getCurrentDate());
+        //eng.postEvent(notifyArrival);
     }
 
     @Override
     public void init() {
     }
 
+    public void creation() {
+        Logger.Information(this, "creation", "A plane was created; Time = " + getEngine().getCurrentDate());
+    }
+
     public void approach() {
-        Logger.Information(this, "approach", "Plane " + this.getId() + " has started its approach");
+        Logger.Information(this, "approach", "Plane " + this.getId() + " has started its approach; Time = " + getEngine().getCurrentDate());
     }
     public void land() {
-        Logger.Information(this, "land", "Plane " + this.getId() + " just landed on runway " + this.getRunway().getId());
+        Logger.Information(this, "land", "Plane " + this.getId() + " is landing on runway " + this.getRunway().getId() + "; Time = " + getEngine().getCurrentDate());
     }
 
     public void flightOver() {
@@ -48,25 +51,25 @@ public class Airplane extends SimEntity {
     }
 
     public void rideToTrack() {
-        Logger.Information(this, "rideToTrack", "Plane " + this.getId() + " is riding on taxiway out " + this.getTaxiwayOut().getId());
+        Logger.Information(this, "rideToTrack", "Plane " + this.getId() + " is riding on taxiway out " + this.getTaxiwayOut().getId() + "; Time = " + getEngine().getCurrentDate());
     }
 
     public void rideToGate() {
         this.getRunway().setAvailable(true);
-        Logger.Information(this, "rideToGate", "Plane " + this.getId() + " is riding on taxiway in " + this.getTaxiwayIn().getId());
+        Logger.Information(this, "rideToGate", "Plane " + this.getId() + " is riding on taxiway in " + this.getTaxiwayIn().getId() + "; Time = " + getEngine().getCurrentDate());
     }
 
     public void unloadPassengers() {
-        Logger.Information(this, "unloadPassengers", "Plane " + this.getId() + " is unloading its passengers");
+        Logger.Information(this, "unloadPassengers", "Plane " + this.getId() + " is unloading its passengers; Time = " + getEngine().getCurrentDate());
     }
 
     public void preparation() {
-        Logger.Information(this, "preparation", "Plane " + this.getId() + " is preparing for next flight");
+        Logger.Information(this, "preparation", "Plane " + this.getId() + " is preparing for next flight; Time = " + getEngine().getCurrentDate());
         this.setId(0);
     }
 
     public void loadPassengers() {
-        Logger.Information(this, "loadPassengers", "Unidentified plane is loading its passengers");
+        Logger.Information(this, "loadPassengers", "Unidentified plane is loading its passengers; Time = " + getEngine().getCurrentDate());
     }
 
     public int getId() {

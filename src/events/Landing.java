@@ -17,7 +17,7 @@ public class Landing extends SimEvent {
         plane.land();
 
         // Create event ride to gate
-        RideToGate ride = new RideToGate(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(2)));
+        RideToGate ride = new RideToGate(plane, plane.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(2)));
         // Add event to the queue
         plane.getEngine().postEvent(ride);
     }

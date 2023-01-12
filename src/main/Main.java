@@ -8,8 +8,12 @@ import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.base.time.LogicalDuration;
 import events.CreateAirplane;
 
+import java.time.DayOfWeek;
+
 public class Main {
     public static void main(String[] args) {
+        Utils utils = new Utils();
+
         // Time creation
         LogicalDateTime currentTime = new LogicalDateTime("01/01/2023 00:00:00.00");
         LogicalDateTime end = new LogicalDateTime("31/12/2023 16:35:03.10");
@@ -22,13 +26,28 @@ public class Main {
 
         // Airplanes creation
         LogicalDateTime time = engine.getCurrentDate();
+        long random;
 
         for(int i = 0; i<150; i++) {
-            long random = (long) engine.getRandom().nextUniform(0, 20);
+            if (time.getDayOfWeek() == DayOfWeek.SATURDAY || time.getDayOfWeek() == DayOfWeek.SUNDAY) {
+                random = (long) engine.getRandom().nextUniform(30, 50);
+            } else {
+                if (utils.rushHour(time)) {
+                    random = (long) engine.getRandom().nextUniform(5, 15);
+                } else {
+                    random = (long) engine.getRandom().nextUniform(10, 30);
+                }
+            }
+
             time = time.add(LogicalDuration.ofMinutes(random));
-            System.out.println("BLABLA " + time);
-            CreateAirplane createAirplane = new CreateAirplane(new Airplane(engine, airport), time);
-            engine.postEvent(createAirplane);
+
+            if(utils.openHour(time, 0)) {  // Si on est entre 07H et 21H30 (pour garder une marge)
+                Airplane airplane = new Airplane(engine, airport);
+                CreateAirplane createAirplane = new CreateAirplane(airplane, time);
+
+                engine.postEvent(createAirplane);
+                engine.getEntityList().add(airplane);
+            }
         }
 
        /* Airplane plane1 = new Airplane(engine, airport);

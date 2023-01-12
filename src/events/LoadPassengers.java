@@ -4,6 +4,7 @@ import airport.Airplane;
 import engine.SimEntity;
 import engine.SimEvent;
 import enstabretagne.base.time.LogicalDateTime;
+import enstabretagne.base.time.LogicalDuration;
 
 public class LoadPassengers extends SimEvent {
     public LoadPassengers(SimEntity entity, LogicalDateTime dateOccurence) {
@@ -16,7 +17,7 @@ public class LoadPassengers extends SimEvent {
         plane.loadPassengers();
 
         // Create notify departure event
-        NotifyDeparture notifyDeparture = new NotifyDeparture(plane, this.getEntity().getEngine().getCurrentDate());
+        NotifyDeparture notifyDeparture = new NotifyDeparture(plane, this.getEntity().getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(20)));
         // Add event to the queue
         plane.getEngine().postEvent(notifyDeparture);
     }

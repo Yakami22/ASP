@@ -20,13 +20,16 @@ public class TakeOff extends SimEvent {
         Runway runway = plane.getAirport().findRunway(plane);
         if (runway != null) {
             plane.getAirport().getTower().authorizeTakeOff(plane);
-            plane.takeOff();
+            // Create endTakeOff event
+            EndTakeOff endTakeOff = new EndTakeOff(plane, plane.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(3)));
+            // Add event to the queue
+            plane.getEngine().postEvent(endTakeOff);
         }
         // Else, reschedule event
         else {
-            Logger.Information(this, "process", "Take off lane is not available for plane " + plane.getId());
+            Logger.Information(this, "process", "Take off lane is not available for plane " + plane.getId() + "; Time = " + plane.getEngine().getCurrentDate());
             // Reschedule
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
+            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(1)));
         }
 
     }
