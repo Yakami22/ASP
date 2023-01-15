@@ -16,7 +16,7 @@ public class Main {
 
         // Time creation
         LogicalDateTime currentTime = new LogicalDateTime("01/01/2023 00:00:00.00");
-        LogicalDateTime end = new LogicalDateTime("31/12/2023 16:35:03.10");
+        LogicalDateTime end = new LogicalDateTime("01/04/2023 00:00:00.00");
 
         // Engine creation
         SimuEngine engine = new SimuEngine(currentTime, end);
@@ -26,27 +26,35 @@ public class Main {
 
         // Airplanes creation
         LogicalDateTime time = engine.getCurrentDate();
+        DayOfWeek dayOfWeek = time.getDayOfWeek();
         long random;
 
-        for(int i = 0; i<150; i++) {
-            if (time.getDayOfWeek() == DayOfWeek.SATURDAY || time.getDayOfWeek() == DayOfWeek.SUNDAY) {
-                random = (long) engine.getRandom().nextUniform(30, 50);
-            } else {
-                if (utils.rushHour(time)) {
-                    random = (long) engine.getRandom().nextUniform(5, 15);
-                } else {
-                    random = (long) engine.getRandom().nextUniform(10, 30);
-                }
-            }
-
-            time = time.add(LogicalDuration.ofMinutes(random));
-
+        //while(time.compareTo(end) < 0) {
+        //for(int i = 0; i<200; i++) {
+        for(;time.compareTo(end) < 0;) {
             if(utils.openHour(time, 0)) {  // Si on est entre 07H et 21H30 (pour garder une marge)
+                if ((dayOfWeek.ordinal() & 6) == 6 || (dayOfWeek.ordinal() & 7) == 7) {
+                    random = (long) engine.getRandom().nextUniform(30, 50);
+                } else {
+                    if (utils.rushHour(time)) {
+                        random = (long) engine.getRandom().nextUniform(5, 15);
+                    } else {
+                        random = (long) engine.getRandom().nextUniform(10, 30);
+                    }
+                }
+
+                time = time.add(LogicalDuration.ofMinutes(random));
+
                 Airplane airplane = new Airplane(engine, airport);
                 CreateAirplane createAirplane = new CreateAirplane(airplane, time);
 
                 engine.postEvent(createAirplane);
                 engine.getEntityList().add(airplane);
+            } else {
+                String hour = " 07:00:00.00";
+                String date = time.add(LogicalDuration.ofDay(1)).toString().split(" ")[0];
+                LogicalDateTime nextMorning = new LogicalDateTime(date + hour);
+                time = nextMorning;
             }
         }
 

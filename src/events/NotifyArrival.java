@@ -7,6 +7,7 @@ import engine.SimEntity;
 import engine.SimEvent;
 import enstabretagne.base.time.LogicalDateTime;
 import enstabretagne.base.time.LogicalDuration;
+import main.Utils;
 
 public class NotifyArrival extends SimEvent {
     public NotifyArrival(SimEntity entity, LogicalDateTime dateOccurence) {
@@ -32,6 +33,6 @@ public class NotifyArrival extends SimEvent {
         // If not, reschedule landing event
         else {
             plane.getAirport().getTower().denyLanding(plane);
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(1)));
+            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
         }
 }}

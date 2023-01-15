@@ -4,8 +4,10 @@ import airport.Airplane;
 import engine.SimEntity;
 import engine.SimEvent;
 import enstabretagne.base.time.LogicalDateTime;
+import main.Utils;
 
 public class CreateAirplane extends SimEvent {
+
     public CreateAirplane(SimEntity entity, LogicalDateTime dateOccurence) {
         super(entity, dateOccurence);
     }

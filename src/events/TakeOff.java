@@ -29,7 +29,7 @@ public class TakeOff extends SimEvent {
         else {
             Logger.Information(this, "process", "Take off lane is not available for plane " + plane.getId() + "; Time = " + plane.getEngine().getCurrentDate());
             // Reschedule
-            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(1)));
+            this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
         }
 
     }
