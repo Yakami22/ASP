@@ -24,12 +24,15 @@ public class TakeOff extends SimEvent {
             EndTakeOff endTakeOff = new EndTakeOff(plane, plane.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(3)));
             // Add event to the queue
             plane.getEngine().postEvent(endTakeOff);
+            plane.durationTakeOff += 3;
         }
         // Else, reschedule event
         else {
-            Logger.Information(this, "process", "Take off lane is not available for plane " + plane.getId() + "; Time = " + plane.getEngine().getCurrentDate());
+            //Logger.Information(this, "process", "Take off lane is not available for plane " + plane.getId() + "; Time = " + plane.getEngine().getCurrentDate());
             // Reschedule
             this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
+            plane.retardTakeOff += 2;
+            plane.durationTakeOff += 2;
         }
 
     }

@@ -15,8 +15,8 @@ public class Main {
         Utils utils = new Utils();
 
         // Time creation
-        LogicalDateTime currentTime = new LogicalDateTime("01/01/2023 00:00:00.00");
-        LogicalDateTime end = new LogicalDateTime("01/04/2023 00:00:00.00");
+        LogicalDateTime currentTime = new LogicalDateTime("01/08/2022 07:00:00.00");
+        LogicalDateTime end = new LogicalDateTime("31/10/2022 23:59:59.00");
 
         // Engine creation
         SimuEngine engine = new SimuEngine(currentTime, end);

@@ -25,7 +25,7 @@ public class Gate {
         setAvailable(false);
         setCurrentAirplane(airplane);
         airplane.setGate(this);
-        Logger.Information(this, "acceptPlane", "Gate " + this.id + " accepted plane " + airplane.getId() + "; Time = " + airplane.getEngine().getCurrentDate());
+        //Logger.Information(this, "acceptPlane", "Gate " + this.id + " accepted plane " + airplane.getId() + "; Time = " + airplane.getEngine().getCurrentDate());
     }
 
     public Airport getAirport() {

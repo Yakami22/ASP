@@ -34,5 +34,7 @@ public class NotifyArrival extends SimEvent {
         else {
             plane.getAirport().getTower().denyLanding(plane);
             this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
+            plane.retardLanding += 2;
+            plane.durationLanding += 2;
         }
 }}

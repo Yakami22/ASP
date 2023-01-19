@@ -27,6 +27,7 @@ public class Approach extends SimEvent {
         } else {
             duration = (long) plane.getEngine().getRandom().nextUniform(2, 5);
         }
+        plane.durationLanding += duration;
         Landing land = new Landing(plane, plane.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(duration)));
         // Add event to the queue
         plane.getEngine().postEvent(land);

@@ -17,6 +17,7 @@ public class RideToTrack extends SimEvent {
         plane.rideToTrack();
 
         long random = (long) plane.getEngine().getRandom().nextUniform(2, 6);
+        plane.durationTakeOff += random;
         // Create take off event
         TakeOff takeOff = new TakeOff(plane, plane.getEngine().getCurrentDate().add(LogicalDuration.ofMinutes(random)));
         // Add event to the queue

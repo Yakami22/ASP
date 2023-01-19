@@ -33,6 +33,8 @@ public class NotifyDeparture extends SimEvent {
         else {
             plane.getAirport().getTower().denyExit(plane);
             this.rescheduleAt(getDateOccurence().add(LogicalDuration.ofMinutes(2)));
+            plane.retardTakeOff += 2;
+            plane.durationTakeOff += 2;
         }
     }
 }

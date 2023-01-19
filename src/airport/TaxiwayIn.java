@@ -25,7 +25,7 @@ public class TaxiwayIn {
         setAvailable(false);
         setCurrentAirplane(airplane);
         airplane.setTaxiwayIn(this);
-        Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned taxiway in " + this.id + "; Time = " + airplane.getEngine().getCurrentDate());
+        //Logger.Information(this, "acceptPlane", "Plane " + airplane.getId() + " is assigned taxiway in " + this.id + "; Time = " + airplane.getEngine().getCurrentDate());
     }
 
     public Airport getAirport() {
